@@ -41,9 +41,6 @@ The website is structured as a client-side Single Page Application utilizing a h
 - Features dynamic network statistics and a visual Orbit animation depicting transaction rollup batches from L2 to L1.
 - Links features directly to the Concepts and Simulator pages for a cohesive learning flow.
 
-#### Interface Preview:
-![Home Page](screenshots/page1_home.webp)
-
 ### 2. **Concepts (`#/concepts`)**
 - High-fidelity educational reference page using side-by-side comparison tables.
 - **Visual Concepts Covered**:
@@ -57,32 +54,11 @@ The website is structured as a client-side Single Page Application utilizing a h
 - **Randomized Knowledge Quiz**: Shuffles a pool of 10 comprehensive Web3 questions on start or restart using a Fisher-Yates randomization algorithm.
 - **Quick Reference Glossary**: 8 interactive grid cards covering Blockchain, Web Evolution, DeFi, L1 & L2 layers, Cryptography, Smart Contracts, DAOs, and Consensus mechanisms.
 
-#### Interface Preview & Key Features:
-
-*   **Concept Cards & Quick Glossary Grid**:
-    ![Concepts Page](screenshots/page2_concepts.png)
-    *Fig 2.1: Side-by-side fundamentals cards with Web2/Web3 progress bars.*
-
-*   **Quick Reference Glossary (Relocated to Top)**:
-    ![Quick Glossary](screenshots/page2_glossary.png)
-    *Fig 2.2: Expandable grid containing short definitions for 8 key Web3 topics.*
-
-*   **Keypair Cryptographic Simulator (Signed)**:
-    ![Cryptographic Simulator](screenshots/page4_simulator.png)
-    *Fig 2.3: Deriving and verifying a cryptographic SHA-256 signature for transaction signing.*
-
-*   **Keypair Verification (Tampered/Mismatch)**:
-    ![Verification Failure State](screenshots/page2_keypair_mismatch.png)
-    *Fig 2.4: Real-time validation warning showing signature mismatch when message data is modified.*
-
 ### 3. **Live Prices (`#/prices`)**
 - Fetches real-time price feeds for **25 leading cryptocurrencies** from the public CoinGecko API.
 - Displays price in USD, 24-hour price change percentage, and dynamic mini sparklines generated from historical trends.
 - Includes instantaneous search filtering.
 - **Resilience Fallback**: If rate-limited (HTTP 429) or offline, the page displays a status warning banner and immediately falls back to a simulated cache feed to preserve usability.
-
-#### Interface Preview:
-![Live Prices Page](screenshots/page3_prices.png)
 
 ### 4. **Interactive Sandbox (`#/simulator`)**
 A comprehensive 9-tab blockchain simulator that maps real Web3 protocols:
@@ -95,9 +71,6 @@ A comprehensive 9-tab blockchain simulator that maps real Web3 protocols:
 7.  **L2 Bridge**: Simulates token lock/unlock mechanisms when depositing or withdrawing ETH between L1 and L2.
 8.  **Smart Contracts**: Features an interactive Solidity compiler and deployer, enabling users to call functions like `mint()` or `transfer()`, write transaction blocks to the chain, and query logs.
 9.  **Gas Calculator**: Estimator converting gas units, prices (Gwei), and network limits into real USD/ETH costs.
-
-#### Interface Preview:
-![Interactive Simulator Sandbox](screenshots/page4_simulator.png)
 
 ---
 
