@@ -57,8 +57,23 @@ The website is structured as a client-side Single Page Application utilizing a h
 - **Randomized Knowledge Quiz**: Shuffles a pool of 10 comprehensive Web3 questions on start or restart using a Fisher-Yates randomization algorithm.
 - **Quick Reference Glossary**: 8 interactive grid cards covering Blockchain, Web Evolution, DeFi, L1 & L2 layers, Cryptography, Smart Contracts, DAOs, and Consensus mechanisms.
 
-#### Interface Preview:
-![Concepts Page](screenshots/page2_concepts.png)
+#### Interface Preview & Key Features:
+
+*   **Concept Cards & Quick Glossary Grid**:
+    ![Concepts Page](screenshots/page2_concepts.png)
+    *Fig 2.1: Side-by-side fundamentals cards with Web2/Web3 progress bars.*
+
+*   **Quick Reference Glossary (Relocated to Top)**:
+    ![Quick Glossary](screenshots/page2_glossary.png)
+    *Fig 2.2: Expandable grid containing short definitions for 8 key Web3 topics.*
+
+*   **Keypair Cryptographic Simulator (Signed)**:
+    ![Cryptographic Simulator](screenshots/page4_simulator.png)
+    *Fig 2.3: Deriving and verifying a cryptographic SHA-256 signature for transaction signing.*
+
+*   **Keypair Verification (Tampered/Mismatch)**:
+    ![Verification Failure State](screenshots/page2_keypair_mismatch.png)
+    *Fig 2.4: Real-time validation warning showing signature mismatch when message data is modified.*
 
 ### 3. **Live Prices (`#/prices`)**
 - Fetches real-time price feeds for **25 leading cryptocurrencies** from the public CoinGecko API.
