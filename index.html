@@ -1,0 +1,3238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusWeb3</title>
+  <meta name="description"
+    content="Explore Web3 concepts, real-time market prices, and interactive blockchain simulation in a modern Layer 2 dashboard.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Ambient background glow blobs -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="#/" class="logo">
+        <div class="logo-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" style="display: block;">
+            <path d="M6 18V6l12 12V6" />
+            <circle cx="6" cy="6" r="1.5" fill="currentColor" />
+            <circle cx="6" cy="18" r="1.5" fill="currentColor" />
+            <circle cx="18" cy="6" r="1.5" fill="currentColor" />
+            <circle cx="18" cy="18" r="1.5" fill="currentColor" />
+          </svg>
+        </div>
+        <span class="logo-text">Nexus<span class="logo-accent">Web3</span></span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#/" class="nav-item" id="nav-home">Home</a></li>
+        <li><a href="#/concepts" class="nav-item" id="nav-concepts">Concepts</a></li>
+        <li><a href="#/prices" class="nav-item" id="nav-prices">Live Prices</a></li>
+        <li><a href="#/simulator" class="nav-item" id="nav-simulator">Simulater</a></li>
+      </ul>
+
+    </div>
+  </header>
+
+  <!-- Main Content Views -->
+  <main class="container">
+
+    <!-- PAGE 1: HOME / LANDING -->
+    <section id="home-page" class="page-view">
+      <div class="hero">
+        <div class="hero-content">
+          <span class="hero-badge">Web3 & Scaling Hub</span>
+          <h1 class="hero-title">Demystifying Web3, <br><span class="hero-accent">Blockchain & L2s</span></h1>
+          <p class="hero-desc">Explore the core infrastructure of the decentralized web. Learn how cryptographic block connections work and how Layer 2 rollups scale Ethereum.</p>
+          <div class="hero-actions">
+            <a href="#/concepts" class="btn btn-primary">Start Learning</a>
+            <a href="#/simulator" class="btn btn-secondary">Try Simulater</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="eth-l2-visualizer">
+            <div class="orbit-path orbit-1"></div>
+            <div class="orb orb-eth">
+              <span class="orb-logo">Ξ</span>
+              <span>L1 Base</span>
+            </div>
+            <div class="orb orb-arb">
+              <span class="orb-logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </span>
+              <span>Arbitrum L2</span>
+            </div>
+            <div class="orb orb-tx">
+              <span>Tx Rollup</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 1: Blockchain / Web3 Introduction -->
+      <div class="features-section">
+        <div class="section-header">
+          <span class="section-tag">Decentralized Web</span>
+          <h2 class="section-title">Introduction to Blockchain & Web3</h2>
+          <p class="section-desc">Web3 shifts control from centralized corporations to open-source networks, secured by cryptographic proof.</p>
+        </div>
+        <div class="features-grid">
+          <!-- Feature 1: What is a Blockchain -->
+          <div class="glass-panel feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                <line x1="12" y1="22.08" x2="12" y2="12" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="feature-title">What is a Blockchain?</h3>
+              <p class="feature-desc">A distributed, immutable digital ledger shared across a network of computer nodes, where transaction history cannot be unilaterally modified.</p>
+            </div>
+          </div>
+          <!-- Feature 2: Decentralization -->
+          <div class="glass-panel feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="feature-title">The Power of Web3</h3>
+              <p class="feature-desc">By using cryptographic proof rather than trusted intermediaries, Web3 gives users direct ownership of their assets, identities, and data.</p>
+            </div>
+          </div>
+          <!-- Feature 3: Smart Contracts -->
+          <div class="glass-panel feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="feature-title">Programmable Ledgers</h3>
+              <p class="feature-desc">Self-executing smart contracts allow automated agreements to run autonomously, eliminating counterparty risk and transaction middlemen.</p>
+            </div>
+          </div>
+          <!-- Feature 4: Token Economics & NFTs -->
+          <div class="glass-panel feature-card">
+            <div class="feature-icon-wrapper" style="background: rgba(236, 72, 153, 0.1); border-color: rgba(236, 72, 153, 0.2); color: #ec4899;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="feature-title">Digital Asset Ownership</h3>
+              <p class="feature-desc">Fungible tokens power transactional economies, while Non-Fungible Tokens (NFTs) secure proof of ownership for unique assets. <a href="#/concepts" class="text-link" style="color: var(--color-primary); font-size: 0.9rem; font-weight: 700; margin-left: 4px; text-decoration: underline;">Learn More →</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: Explainer for Transactions, Blocks, and Chains & Block Connection Visualizer -->
+      <div class="blockchain-visualizer-section glass-panel" style="margin-bottom: 80px; padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); background: rgba(20, 15, 38, 0.45);">
+        <div class="section-header" style="margin-bottom: 32px; text-align: center;">
+          <span class="section-tag" style="margin-bottom: 8px;">Web3 Fundamentals</span>
+          <h2 class="section-title">Blockchain & Web3 Explained</h2>
+          <p class="section-desc">Understand how transactions are grouped into blocks and cryptographically chained together to ensure absolute immutability.</p>
+        </div>
+
+        <!-- 3-Pillar Explainer (Transactions, Blocks, Chains) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px;">
+          <!-- Transactions Card -->
+          <div class="explainer-card" style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 24px; transition: var(--transition-smooth); cursor: pointer;" onmouseover="this.style.borderColor='var(--color-primary)'; this.style.boxShadow='0 0 15px rgba(0, 242, 254, 0.15)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none';">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(0, 242, 254, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--color-primary);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+            </div>
+            <h4 style="font-family: var(--font-orbitron); font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; color: var(--color-text-primary);">1. Transactions</h4>
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5;">
+              Transactions are the fundamental messages in Web3. They represent a transfer of value (e.g., Alice sending 0.5 ETH to Bob) or execution instructions for a smart contract. Each transaction is digitally signed by the sender's private key.
+            </p>
+          </div>
+
+          <!-- Blocks Card -->
+          <div class="explainer-card" style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 24px; transition: var(--transition-smooth); cursor: pointer;" onmouseover="this.style.borderColor='var(--color-success)'; this.style.boxShadow='0 0 15px rgba(0, 255, 210, 0.15)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none';">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(0, 255, 210, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--color-success);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              </svg>
+            </div>
+            <h4 style="font-family: var(--font-orbitron); font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; color: var(--color-text-primary);">2. Blocks</h4>
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5;">
+              Blocks are storage containers that package multiple transactions together. Along with the transaction records, a block contains metadata including a timestamp, a block number, a cryptographic nonce, and its own unique SHA-256 block hash.
+            </p>
+          </div>
+
+          <!-- Chains Card -->
+          <div class="explainer-card" style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 24px; transition: var(--transition-smooth); cursor: pointer;" onmouseover="this.style.borderColor='var(--color-warning)'; this.style.boxShadow='0 0 15px rgba(255, 179, 64, 0.15)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.boxShadow='none';">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(255, 179, 64, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--color-warning);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+              </svg>
+            </div>
+            <h4 style="font-family: var(--font-orbitron); font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; color: var(--color-text-primary);">3. Chains</h4>
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5;">
+              Chains represent the link. Each new block contains the cryptographic hash of the *previous* block. This creates a back-linked ledger. If any transaction in a past block is altered, its hash changes, breaking the link for all subsequent blocks.
+            </p>
+          </div>
+        </div>
+
+        <!-- Visual representation of how blocks are connected -->
+        <h3 style="font-family: var(--font-orbitron); font-size: 1.25rem; font-weight: 700; text-align: center; margin-bottom: 24px; color: var(--color-text-primary);">Visualizing Block Connections</h3>
+        
+        <div class="visual-chain-container" style="display: flex; align-items: center; justify-content: center; gap: 16px; overflow-x: auto; padding: 20px 10px; margin-bottom: 32px;">
+          
+          <!-- Block 1 -->
+          <div class="visual-block-card glass-panel" style="flex: 1; min-width: 240px; max-width: 300px; padding: 16px; border: 1px solid var(--color-success); background: rgba(0, 255, 210, 0.03); border-radius: var(--radius-md); box-shadow: 0 0 15px rgba(0, 255, 210, 0.05);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-weight: 700; font-family: var(--font-orbitron); color: var(--color-success); font-size: 0.85rem;">
+              <span>BLOCK #1</span>
+              <span>GENESIS</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-secondary); display: flex; flex-direction: column; gap: 6px;">
+              <div><strong>NONCE:</strong> 72039</div>
+              <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 6px; margin-top: 4px;">
+                <div style="color: var(--color-primary); font-weight: 700; margin-bottom: 4px; font-family: var(--font-orbitron);">TRANSACTIONS</div>
+                <div style="font-size: 0.7rem;">• Alice ➔ Bob: 1.2 ETH</div>
+                <div style="font-size: 0.7rem;">• Charlie ➔ Dave: 0.5 ETH</div>
+              </div>
+              <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 6px; margin-top: 4px;">
+                <div><strong>PREV HASH:</strong> 0000000000000000...</div>
+                <div style="color: var(--color-success); font-weight: 700; margin-top: 2px;"><strong>HASH:</strong> 0000f72a9b3c...</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link Arrow 1-2 -->
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;">
+            <div style="font-size: 1.5rem; color: var(--color-success); text-shadow: 0 0 8px var(--color-success);">➔</div>
+            <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-text-muted); text-align: center; max-width: 60px;">Link: Prev Hash</span>
+          </div>
+
+          <!-- Block 2 -->
+          <div class="visual-block-card glass-panel" style="flex: 1; min-width: 240px; max-width: 300px; padding: 16px; border: 1px solid var(--color-success); background: rgba(0, 255, 210, 0.03); border-radius: var(--radius-md); box-shadow: 0 0 15px rgba(0, 255, 210, 0.05);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-weight: 700; font-family: var(--font-orbitron); color: var(--color-success); font-size: 0.85rem;">
+              <span>BLOCK #2</span>
+              <span>MINED</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-secondary); display: flex; flex-direction: column; gap: 6px;">
+              <div><strong>NONCE:</strong> 94812</div>
+              <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 6px; margin-top: 4px;">
+                <div style="color: var(--color-primary); font-weight: 700; margin-bottom: 4px; font-family: var(--font-orbitron);">TRANSACTIONS</div>
+                <div style="font-size: 0.7rem;">• Dave ➔ Eve: 0.15 ETH</div>
+                <div style="font-size: 0.7rem;">• Bob ➔ Alice: 0.4 ETH</div>
+              </div>
+              <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 6px; margin-top: 4px;">
+                <div style="color: var(--color-success);"><strong>PREV HASH:</strong> 0000f72a9b3c...</div>
+                <div style="color: var(--color-success); font-weight: 700; margin-top: 2px;"><strong>HASH:</strong> 00005a9d2c1f...</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link Arrow 2-3 -->
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;">
+            <div style="font-size: 1.5rem; color: var(--color-success); text-shadow: 0 0 8px var(--color-success);">➔</div>
+            <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-text-muted); text-align: center; max-width: 60px;">Link: Prev Hash</span>
+          </div>
+
+          <!-- Block 3 -->
+          <div class="visual-block-card glass-panel" style="flex: 1; min-width: 240px; max-width: 300px; padding: 16px; border: 1px solid var(--color-success); background: rgba(0, 255, 210, 0.03); border-radius: var(--radius-md); box-shadow: 0 0 15px rgba(0, 255, 210, 0.05);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-weight: 700; font-family: var(--font-orbitron); color: var(--color-success); font-size: 0.85rem;">
+              <span>BLOCK #3</span>
+              <span>MINED</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-secondary); display: flex; flex-direction: column; gap: 6px;">
+              <div><strong>NONCE:</strong> 120485</div>
+              <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 6px; margin-top: 4px;">
+                <div style="color: var(--color-primary); font-weight: 700; margin-bottom: 4px; font-family: var(--font-orbitron);">TRANSACTIONS</div>
+                <div style="font-size: 0.7rem;">• Eve ➔ Alice: 0.08 ETH</div>
+                <div style="font-size: 0.7rem;">• Dave ➔ Frank: 0.3 ETH</div>
+              </div>
+              <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 6px; margin-top: 4px;">
+                <div style="color: var(--color-success);"><strong>PREV HASH:</strong> 00005a9d2c1f...</div>
+                <div style="color: var(--color-success); font-weight: 700; margin-top: 2px;"><strong>HASH:</strong> 00009c2e7b4a...</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; border-top: 1px solid var(--border-color); padding-top: 24px;">
+          <p style="color: var(--color-text-secondary); margin-bottom: 16px; font-size: 1rem;">Want to test this live? Try mining blocks, editing transactions, and breaking the hash links in our live sandbox simulator.</p>
+          <a href="#/simulator" class="btn btn-primary" style="display: inline-block;">Open Live Block Simulater</a>
+        </div>
+      </div>
+
+      <!-- SECTION 3: Arbitrum or Layer 2 Overview (Deep Dive & Scaling Timeline) -->
+      <div class="deep-dive glass-panel" style="margin-bottom: 80px;">
+        <div class="section-header" style="margin-bottom: 32px; text-align: left;">
+          <span class="section-tag" style="margin-bottom: 8px;">Protocol Architecture</span>
+          <h3 style="font-size: 1.75rem; font-weight: 800;">Layer 2 Scaling Deep Dive</h3>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 32px;">
+          <!-- 1. Why Ethereum Needed L2 -->
+          <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px;">
+            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: var(--color-primary);">1. Why Ethereum Needed L2</h4>
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5;">
+              Ethereum is highly secure and decentralized, but limited to ~15 transactions per second. As adoption surged, network congestion led to bidding wars on gas fees, pricing out average users.
+            </p>
+          </div>
+
+          <!-- 2. What Arbitrum Is & How It Helps -->
+          <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px;">
+            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: var(--color-success);">2. What Arbitrum Is & How It Helps</h4>
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5;">
+              Arbitrum is an **Optimistic Rollup** L2 scaling solution. It compiles thousands of off-chain transactions into a single compressed package, submitting this batch to Ethereum L1 to offload 99% of computation.
+            </p>
+          </div>
+
+          <!-- 3. Real-World Benefit Over Mainnet -->
+          <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px;">
+            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: var(--color-warning);">3. Real-World Benefit Over Mainnet</h4>
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5;">
+              **Microtransaction Viability**: Trading on Ethereum mainnet can cost $10–$100 in gas fees. On Arbitrum, the same transaction costs under $0.05, making Web3 and gaming accessible to everyone.
+            </p>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid var(--border-color); padding-top: 24px;">
+          <div class="stats-grid" style="flex-grow: 1; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); width: 100%;">
+            <div class="stat-box">
+              <div class="stat-num">95%</div>
+              <div class="stat-label">Fee Reduction</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">40,000+</div>
+              <div class="stat-label">Transactions/Sec</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">EVM Compatible</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">$3.2B</div>
+              <div class="stat-label">Total Value Locked</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ethereum Scaling Journey Timeline -->
+      <div class="timeline-section" style="margin-bottom: 80px;">
+        <div class="section-header">
+          <span class="section-tag">Scaling Journey</span>
+          <h2 class="section-title">The Path to Ethereum Scale</h2>
+          <p class="section-desc">Trace how the Ethereum network evolved from congested transaction bottlenecks to rapid L2 rollup platforms.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Phase 1 -->
+          <div class="timeline-item">
+            <div class="timeline-badge">1</div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">Phase 1: L1 Congestion (The Bottleneck)</h3>
+              <p class="timeline-desc">
+                Ethereum Mainnet processes all execution, consensus, and data availability on a single layer. Limited to ~15 transactions per second, high user demand leads to extreme network congestion and expensive gas fees.
+              </p>
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="timeline-item">
+            <div class="timeline-badge">2</div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">Phase 2: Off-Chain Execution (Rollups)</h3>
+              <p class="timeline-desc">
+                Execution is shifted to a secondary Layer 2. Arbitrum compiles thousands of transactions, processes them off-chain instantly, and rolls them up into a single compressed package, drastically reducing computing overhead on L1.
+              </p>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="timeline-item">
+            <div class="timeline-badge">3</div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">Phase 3: Secure Settlement (Ethereum Anchor)</h3>
+              <p class="timeline-desc">
+                The rolled-up transaction batches are written directly to Ethereum L1. By anchoring state roots on mainnet and supporting fraud proofs, L2 inherits the full, decentralized security guarantees of Ethereum's validator consensus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Section (based on AWS Blockchain guide) -->
+      <div class="faq-section">
+        <div class="section-header">
+          <span class="section-tag">FAQ Guide</span>
+          <h2 class="section-title">Blockchain Questions Explained</h2>
+          <p class="section-desc">Get Authoritative Answers to Fundamental Blockchain Questions Compiled From The
+            Blockchain Guide.</p>
+        </div>
+
+        <div class="faq-grid">
+          <!-- Q1 -->
+          <details class="faq-item">
+            <summary class="faq-summary">What is blockchain technology?</summary>
+            <div class="faq-content">
+              <p>Blockchain technology is an advanced database mechanism that allows transparent information sharing
+                within a business network. A blockchain database stores data in blocks that are linked together in a
+                chain. The data is chronologically consistent because you cannot delete or modify the chain without
+                consensus from the network. As a result, you can use blockchain technology to create an unalterable or
+                immutable ledger for tracking orders, payments, accounts, and other transactions. The system has
+                built-in mechanisms that prevent unauthorized transaction entries and create consistency in the shared
+                view of these transactions.</p>
+            </div>
+          </details>
+
+          <!-- Q2 -->
+          <details class="faq-item">
+            <summary class="faq-summary">Why is blockchain important?</summary>
+            <div class="faq-content">
+              <p>Traditional database technologies present several challenges for recording financial transactions. For
+                instance, consider the sale of a property. Once the money is exchanged, ownership of the property is
+                transferred to the buyer. Individually, both the buyer and the seller can record the monetary
+                transactions, but neither source can be trusted. The seller can easily claim they have not received the
+                money even though they have, and the buyer can equally argue that they have paid the money even if they
+                haven’t.</p>
+              <p style="margin-top: 12px;">To avoid potential legal issues, a trusted third party has to supervise and
+                validate transactions. The presence of this central authority not only complicates the transaction but
+                also creates a single point of vulnerability. If the central database was compromised, both parties
+                could suffer.</p>
+              <p style="margin-top: 12px;">Blockchain mitigates such issues by creating a decentralized, tamper-proof
+                system to record transactions. In the property transaction scenario, blockchain creates one ledger each
+                for the buyer and the seller. All transactions must be approved by both parties and are automatically
+                updated in both of their ledgers in real time. Any corruption in historical transactions will corrupt
+                the entire ledger. These properties of blockchain technology have led to its use in various sectors,
+                including the creation of digital currency like Bitcoin.</p>
+            </div>
+          </details>
+
+          <!-- Q3 -->
+          <details class="faq-item">
+            <summary class="faq-summary">How do different industries use blockchain?</summary>
+            <div class="faq-content">
+              <p>Blockchain is an emerging technology that is being adopted in innovative manner by various industries.
+                We describe some use cases in different industries in the following subsections:</p>
+
+              <div style="margin-top: 16px;">
+                <h5 style="color: var(--color-primary); font-size: 1rem; margin-bottom: 6px;">Energy</h5>
+                <p>Energy companies use blockchain technology to create peer-to-peer energy trading platforms and
+                  streamline access to renewable energy. For example, consider these uses:</p>
+                <ul style="margin-top: 6px; margin-left: 20px;">
+                  <li>Blockchain-based energy companies have created a trading platform for the sale of electricity
+                    between individuals. Homeowners with solar panels use this platform to sell their excess solar
+                    energy to neighbors. The process is largely automated: smart meters create transactions, and
+                    blockchain records them.</li>
+                  <li>With blockchain-based crowd funding initiatives, users can sponsor and own solar panels in
+                    communities that lack energy access. Sponsors might also receive rent for these communities once the
+                    solar panels are constructed.</li>
+                </ul>
+              </div>
+
+              <div style="margin-top: 16px;">
+                <h5 style="color: var(--color-primary); font-size: 1rem; margin-bottom: 6px;">Finance</h5>
+                <p>Traditional financial systems, like banks and stock exchanges, use blockchain services to manage
+                  online payments, accounts, and market trading. For example, Singapore Exchange Limited, an investment
+                  holding company that provides financial trading services throughout Asia, uses blockchain technology
+                  to build a more efficient interbank payment account. By adopting blockchain, they solved several
+                  challenges, including batch processing and manual reconciliation of several thousand financial
+                  transactions.</p>
+              </div>
+
+              <div style="margin-top: 16px;">
+                <h5 style="color: var(--color-primary); font-size: 1rem; margin-bottom: 6px;">Media and entertainment
+                </h5>
+                <p>Companies in media and entertainment use blockchain systems to manage copyright data. Copyright
+                  verification is critical for the fair compensation of artists. It takes multiple transactions to
+                  record the sale or transfer of copyright content. Sony Music Entertainment Japan uses blockchain
+                  services to make digital rights management more efficient. They have successfully used blockchain
+                  strategy to improve productivity and reduce costs in copyright processing.</p>
+              </div>
+
+              <div style="margin-top: 16px;">
+                <h5 style="color: var(--color-primary); font-size: 1rem; margin-bottom: 6px;">Retail</h5>
+                <p>Retail companies use blockchain to track the movement of goods between suppliers and buyers. For
+                  example, Amazon retail has filed a patent for a distributed ledger technology system that will use
+                  blockchain technology to verify that all goods sold on the platform are authentic. Amazon sellers can
+                  map their global supply chains by allowing participants such as manufacturers, couriers, distributors,
+                  end users, and secondary users to add events to the ledger after registering with a certificate
+                  authority.</p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Q4 -->
+          <details class="faq-item">
+            <summary class="faq-summary">What are the features of blockchain technology?</summary>
+            <div class="faq-content">
+              <p>Blockchain technology has the following main features:</p>
+              <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 12px;">
+                <div>
+                  <strong style="color: var(--color-text-primary);">Decentralization</strong>
+                  <p style="margin-top: 4px;">Decentralization in blockchain refers to transferring control and decision
+                    making from a centralized entity (individual, organization, or group) to a distributed network.
+                    Decentralized blockchain networks use transparency to reduce the need for trust among participants.
+                    These networks also deter participants from exerting authority or control over one another in ways
+                    that degrade the functionality of the network.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Immutability</strong>
+                  <p style="margin-top: 4px;">Immutability means something cannot be changed or altered. No participant
+                    can tamper with a transaction once someone has recorded it to the shared ledger. If a transaction
+                    record includes an error, you must add a new transaction to reverse the mistake, and both
+                    transactions are visible to the network.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Consensus</strong>
+                  <p style="margin-top: 4px;">A blockchain system establishes rules about participant consent for
+                    recording transactions. You can record new transactions only when the majority of participants in
+                    the network give their consent.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Q5 -->
+          <details class="faq-item">
+            <summary class="faq-summary">What are the key components of blockchain technology?</summary>
+            <div class="faq-content">
+              <p>Blockchain architecture has the following main components:</p>
+              <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 12px;">
+                <div>
+                  <strong style="color: var(--color-text-primary);">A distributed ledger</strong>
+                  <p style="margin-top: 4px;">A distributed ledger is the shared database in the blockchain network that
+                    stores the transactions, such as a shared file that everyone in the team can edit. In most shared
+                    text editors, anyone with editing rights can delete the entire file. However, distributed ledger
+                    technologies have strict rules about who can edit and how to edit. You cannot delete entries once
+                    they have been recorded.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Smart contracts</strong>
+                  <p style="margin-top: 4px;">Companies use smart contracts to self-manage business contracts without
+                    the need for an assisting third party. They are programs stored on the blockchain system that run
+                    automatically when predetermined conditions are met. They run if-then checks so that transactions
+                    can be completed confidently. For example, a logistics company can have a smart contract that
+                    automatically makes payment once goods have arrived at the port.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Public key cryptography</strong>
+                  <p style="margin-top: 4px;">Public key cryptography is a security feature to uniquely identify
+                    participants in the blockchain network. This mechanism generates two sets of keys for network
+                    members. One key is a public key that is common to everyone in the network. The other is a private
+                    key that is unique to every member. The private and public keys work together to unlock the data in
+                    the ledger.</p>
+                  <p style="margin-top: 6px;">For example, John and Jill are two members of the network. John records a
+                    transaction that is encrypted with his private key. Jill can decrypt it with her public key. This
+                    way, Jill is confident that John made the transaction. Jill's public key wouldn't have worked if
+                    John's private key had been tampered with.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Q6 -->
+          <details class="faq-item">
+            <summary class="faq-summary">How does blockchain work?</summary>
+            <div class="faq-content">
+              <p>While underlying blockchain mechanisms are complex, we give a brief overview in the following steps.
+                Blockchain software can automate most of these steps:</p>
+              <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 12px;">
+                <div>
+                  <strong style="color: var(--color-text-primary);">Step 1 – Record the transaction</strong>
+                  <p style="margin-top: 4px;">A blockchain transaction shows the movement of physical or digital assets
+                    from one party to another in the blockchain network. It is recorded as a data block and can include
+                    details like these:</p>
+                  <ul style="margin-top: 6px; margin-left: 20px;">
+                    <li>Who was involved in the transaction?</li>
+                    <li>What happened during the transaction?</li>
+                    <li>When did the transaction occur?</li>
+                    <li>Where did the transaction occur?</li>
+                    <li>Why did the transaction occur?</li>
+                    <li>How much of the asset was exchanged?</li>
+                    <li>How many pre-conditions were met during the transaction?</li>
+                  </ul>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Step 2 – Gain consensus</strong>
+                  <p style="margin-top: 4px;">Most participants on the distributed blockchain network must agree that
+                    the recorded transaction is valid. Depending on the type of network, rules of agreement can vary but
+                    are typically established at the start of the network.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Step 3 – Link the blocks</strong>
+                  <p style="margin-top: 4px;">Once the participants have reached a consensus, transactions on the
+                    blockchain are written into blocks equivalent to the pages of a ledger book. Along with the
+                    transactions, a cryptographic hash is also appended to the new block. The hash acts as a chain that
+                    links the blocks together. If the contents of the block are intentionally or unintentionally
+                    modified, the hash value changes, providing a way to detect data tampering.</p>
+                  <p style="margin-top: 6px;">Thus, the blocks and chains link securely, and you cannot edit them. Each
+                    additional block strengthens the verification of the previous block and therefore the entire
+                    blockchain. This is like stacking wooden blocks to make a tower. You can only stack blocks on top,
+                    and if you remove a block from the middle of the tower, the whole tower breaks.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Step 4 – Share the ledger</strong>
+                  <p style="margin-top: 4px;">The system distributes the latest copy of the central ledger to all
+                    participants.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Q7 -->
+          <details class="faq-item">
+            <summary class="faq-summary">What are the types of blockchain networks?</summary>
+            <div class="faq-content">
+              <p>There are four main types of decentralized or distributed networks in the blockchain:</p>
+              <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 12px;">
+                <div>
+                  <strong style="color: var(--color-text-primary);">Public blockchain networks</strong>
+                  <p style="margin-top: 4px;">Public blockchains are permissionless and allow everyone to join them. All
+                    members of the blockchain have equal rights to read, edit, and validate the blockchain. People
+                    primarily use public blockchains to exchange and mine cryptocurrencies like Bitcoin, Ethereum, and
+                    Litecoin.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Private blockchain networks</strong>
+                  <p style="margin-top: 4px;">A single organization controls private blockchains, also called managed
+                    blockchains. The authority determines who can be a member and what rights they have in the network.
+                    Private blockchains are only partially decentralized because they have access restrictions. Ripple,
+                    a digital currency exchange network for businesses, is an example of a private blockchain.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Hybrid blockchain networks</strong>
+                  <p style="margin-top: 4px;">Hybrid blockchains combine elements from both private and public networks.
+                    Companies can set up private, permission-based systems alongside a public system. In this way, they
+                    control access to specific data stored in the blockchain while keeping the rest of the data public.
+                    They use smart contracts to allow public members to check if private transactions have been
+                    completed. For example, hybrid blockchains can grant public access to digital currency while keeping
+                    bank-owned currency private.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Consortium blockchain networks</strong>
+                  <p style="margin-top: 4px;">A group of organizations governs consortium blockchain networks.
+                    Preselected organizations share the responsibility of maintaining the blockchain and determining
+                    data access rights. Industries in which many organizations have common goals and benefit from shared
+                    responsibility often prefer consortium blockchain networks. For example, the Global Shipping
+                    Business Network Consortium is a not-for-profit blockchain consortium that aims to digitize the
+                    shipping industry and increase collaboration between maritime industry operators.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Q8 -->
+          <details class="faq-item">
+            <summary class="faq-summary">What are blockchain protocols?</summary>
+            <div class="faq-content">
+              <p>The term blockchain protocol refers to different types of blockchain platforms that are available for
+                application development. Each blockchain protocol adapts the basic blockchain principles to suit
+                specific industries or applications. Some examples of blockchain protocols are provided in the following
+                subsections:</p>
+              <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 12px;">
+                <div>
+                  <strong style="color: var(--color-text-primary);">Hyperledger fabric</strong>
+                  <p style="margin-top: 4px;">Hyperledger Fabric is an open-source project with a suite of tools and
+                    libraries. Enterprises can use it to build private blockchain applications quickly and effectively.
+                    It is a modular, general-purpose framework that offers unique identity management and access control
+                    features. These features make it suitable for various applications, such as track-and-trace of
+                    supply chains, trade finance, loyalty and rewards, and clearing settlement of financial assets.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Ethereum</strong>
+                  <p style="margin-top: 4px;">Ethereum is a decentralized open-source blockchain platform that people
+                    can use to build public blockchain applications. Ethereum Enterprise is designed for business use
+                    cases.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Corda</strong>
+                  <p style="margin-top: 4px;">Corda is an open-source blockchain project designed for business. With
+                    Corda, you can build interoperable blockchain networks that transact in strict privacy. Businesses
+                    can use Corda's smart contract technology to transact directly, with value. Most of its users are
+                    financial institutions.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Quorum</strong>
+                  <p style="margin-top: 4px;">Quorum is an open-source blockchain protocol that is derived from
+                    Ethereum. It is specially designed for use in a private blockchain network, where only a single
+                    member owns all the nodes, or in a consortium blockchain network, where multiple members each own a
+                    portion of the network.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Q9 -->
+          <details class="faq-item">
+            <summary class="faq-summary">How did blockchain technology evolve?</summary>
+            <div class="faq-content">
+              <p>Blockchain technology has its roots in the late 1970s when a computer scientist named Ralph Merkle
+                patented Hash trees or Merkle trees. These trees are a computer science structure for storing data by
+                linking blocks using cryptography. In the late 1990s, Stuart Haber and W. Scott Stornetta used Merkle
+                trees to implement a system in which document timestamps could not be tampered with. This was the first
+                instance in the history of blockchain.</p>
+              <p style="margin-top: 12px;">The technology has continued to evolve over these three generations:</p>
+              <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 12px;">
+                <div>
+                  <strong style="color: var(--color-text-primary);">First generation – Bitcoin and other virtual
+                    currencies</strong>
+                  <p style="margin-top: 4px;">In 2008, an anonymous individual or group of individuals known only by the
+                    name Satoshi Nakamoto outlined blockchain technology in its modern form. Satoshi's idea of the
+                    Bitcoin blockchain used 1 MB blocks of information for Bitcoin transactions. Many of the features of
+                    Bitcoin blockchain systems remain central to blockchain technology even today.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Second generation – smart contracts</strong>
+                  <p style="margin-top: 4px;">A few years after first-generation currencies emerged, developers began to
+                    consider blockchain applications beyond cryptocurrency. For instance, the inventors of Ethereum
+                    decided to use blockchain technology in asset transfer transactions. Their significant contribution
+                    was the smart contracts feature.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Third generation – the future</strong>
+                  <p style="margin-top: 4px;">As companies discover and implement new applications, blockchain
+                    technology continues to evolve and grow. Companies are solving limitations of scale and computation,
+                    and potential opportunities are limitless in the ongoing blockchain revolution.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Q10 -->
+          <details class="faq-item">
+            <summary class="faq-summary">What are the benefits of blockchain technology?</summary>
+            <div class="faq-content">
+              <p>Blockchain technology brings many benefits to asset transaction management. We list a few of them in
+                the following subsections:</p>
+              <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 12px;">
+                <div>
+                  <strong style="color: var(--color-text-primary);">Advanced security</strong>
+                  <p style="margin-top: 4px;">Blockchain systems provide the high level of security and trust that
+                    modern digital transactions require. There is always a fear that someone will manipulate underlying
+                    software to generate fake money for themselves. But blockchain uses the three principles of
+                    cryptography, decentralization, and consensus to create a highly secure underlying software system
+                    that is nearly impossible to tamper with. There is no single point of failure, and a single user
+                    cannot change the transaction records.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Improved efficiency</strong>
+                  <p style="margin-top: 4px;">Business-to-business transactions can take a lot of time and create
+                    operational bottlenecks, especially when compliance and third-party regulatory bodies are involved.
+                    Transparency and smart contracts in blockchain make such business transactions faster and more
+                    efficient.</p>
+                </div>
+                <div>
+                  <strong style="color: var(--color-text-primary);">Faster auditing</strong>
+                  <p style="margin-top: 4px;">Enterprises must be able to securely generate, exchange, archive, and
+                    reconstruct e-transactions in an auditable manner. Blockchain records are chronologically immutable,
+                    which means that all records are always ordered by time. This data transparency makes audit
+                    processing much faster.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Q11 -->
+          <details class="faq-item">
+            <summary class="faq-summary">What is the difference between Bitcoin and blockchain?</summary>
+            <div class="faq-content">
+              <p>Bitcoin and blockchain might be used interchangeably, but they are two different things. Since Bitcoin
+                was an early application of blockchain technology, people inadvertently began using Bitcoin to mean
+                blockchain, creating this misnomer. But blockchain technology has many applications outside of Bitcoin.
+              </p>
+              <p style="margin-top: 12px;">Bitcoin is a digital currency that operates without any centralized control.
+                Bitcoins were originally created to make financial transactions online but are now considered digital
+                assets that can be converted to any other global currency, like USD or euros. A public Bitcoin
+                blockchain network creates and manages the central ledger.</p>
+
+              <div style="margin-top: 16px;">
+                <h5 style="color: var(--color-primary); font-size: 1rem; margin-bottom: 6px;">Bitcoin network</h5>
+                <p>A public ledger records all Bitcoin transactions, and servers around the world hold copies of this
+                  ledger. The servers are like banks. Although each bank knows only about the money its customers
+                  exchange, Bitcoin servers are aware of every single Bitcoin transaction in the world.</p>
+                <p style="margin-top: 8px;">Anyone with a spare computer can set up one of these servers, known as a
+                  node. This is like opening your own Bitcoin bank instead of a bank account.</p>
+              </div>
+
+              <div style="margin-top: 16px;">
+                <h5 style="color: var(--color-primary); font-size: 1rem; margin-bottom: 6px;">Bitcoin mining</h5>
+                <p>On the public Bitcoin network, members mine for cryptocurrency by solving cryptographic equations to
+                  create new blocks. The system broadcasts each new transaction publicly to the network and shares it
+                  from node to node. Every ten minutes or so, miners collect these transactions into a new block and add
+                  them permanently to the blockchain, which acts like the definitive account book of Bitcoin.</p>
+                <p style="margin-top: 8px;">Mining requires significant computational resources and takes a long time
+                  due to the complexity of the software process. In exchange, miners earn a small amount of
+                  cryptocurrency. The miners act as modern clerks who record transactions and collect transaction fees.
+                </p>
+                <p style="margin-top: 8px;">All participants across the network reach a consensus on who owns which
+                  coins, using blockchain cryptography technology.</p>
+              </div>
+            </div>
+          </details>
+
+          <!-- Q12 -->
+          <details class="faq-item">
+            <summary class="faq-summary">What is the difference between a database and a blockchain?</summary>
+            <div class="faq-content">
+              <p>Blockchain is a special type of database management system that has more features than a regular
+                database. We describe some significant differences between a traditional database and a blockchain in
+                the following list:</p>
+              <ul style="margin-top: 12px; margin-left: 20px;">
+                <li>Blockchains decentralize control without damaging trust in the existing data. This is not possible
+                  in other database systems.</li>
+                <li>Companies involved in a transaction cannot share their entire database. But in blockchain networks,
+                  each company has its copy of the ledger, and the system automatically maintains consistency between
+                  the two ledgers.</li>
+                <li>Although in most database systems you can edit or delete data, in blockchain you can only insert
+                  data.</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- Q13 -->
+          <details class="faq-item">
+            <summary class="faq-summary">How is blockchain different from the cloud?</summary>
+            <div class="faq-content">
+              <p>The term cloud refers to computing services that can be accessed online. You can access Software as a
+                Service (SaaS), Product as a Service (PaaS), and Infrastructure as a Service (IaaS) from the cloud.
+                Cloud providers manage their hardware and infrastructure and give you access to these computing
+                resources over the internet. They provide many more resources than just database management. If you want
+                to join a public blockchain network, you need to provide your hardware resources to store your ledger
+                copy. You could use a server from the cloud for this purpose too. Some cloud providers also offer
+                complete Blockchain as a Service (BaaS) from the cloud.</p>
+            </div>
+          </details>
+
+          <!-- Q14 -->
+          <details class="faq-item">
+            <summary class="faq-summary">What is Blockchain as a Service?</summary>
+            <div class="faq-content">
+              <p>Blockchain as a Service (BaaS) is a managed blockchain service that a third party provides in the
+                cloud. You can develop blockchain applications and digital services while the cloud provider supplies
+                the infrastructure and blockchain building tools. All you have to do is customize existing blockchain
+                technology, which makes blockchain adoption faster and more efficient.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Our Vision Section -->
+      <div class="vision-section glass-panel" style="margin-top: 56px; margin-bottom: 30px;">
+        <div class="section-header" style="margin-bottom: 40px; text-align: center;">
+          <span class="section-tag">Our Vision</span>
+          <h2 class="section-title">The Vision of NexusWeb3</h2>
+          <p class="section-desc">Empowering the next generation of decentralized builders through accessible education,
+            interactive tools, and real-time insights.</p>
+        </div>
+
+        <div
+          style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; margin-bottom: 40px; align-items: start;">
+          <div>
+            <p style="color: var(--color-text-secondary); margin-bottom: 16px; font-size: 1.05rem; line-height: 1.6;">
+              NexusWeb3 is an interactive educational hub designed to demystify the core infrastructure of the
+              decentralized web. We believe that understanding Web3 shouldn't require reading dry, overly-technical
+              whitepapers.
+            </p>
+            <p style="color: var(--color-text-secondary); margin-bottom: 32px; font-size: 1.05rem; line-height: 1.6;">
+              Through direct comparisons, real-time market data API integrations, and hands-on cryptographic sandboxes,
+              NexusWeb3 makes blockchain concepts accessible, intuitive, and engaging for the next generation of
+              builders.
+            </p>
+            <div style="display: flex; gap: 16px; align-items: center;">
+              <div class="creator-avatar">DS</div>
+              <div>
+                <h4 style="font-weight: 700; font-family: var(--font-orbitron); color: var(--color-text-primary);">Daksh
+                  Savaliya</h4>
+                <p style="font-size: 0.85rem; color: var(--color-text-muted);">Lead Developer & Web3 Student</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-stats-showcase" style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="about-stat-card">
+              <h3>100%</h3>
+              <p>Open Source & Vanilla JS</p>
+            </div>
+            <div class="about-stat-card">
+              <h3>L2 Focus</h3>
+              <p>Ethereum Scaling & Arbitrum</p>
+            </div>
+            <div class="about-stat-card">
+              <h3>Interactive</h3>
+              <p>Visual Cryptographic Mining</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mission-grid" style="border-top: 1px solid var(--border-color); padding-top: 40px;">
+          <!-- Pillar 1 -->
+          <div class="mission-card">
+            <div class="mission-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <h4 class="mission-pillar-title">Demystifying Web3</h4>
+            <p class="mission-pillar-desc">Breaking down complex cryptography, consensus mechanics, and protocol layers
+              into highly structured, clear, and bite-sized conceptual frameworks.</p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="mission-card">
+            <div class="mission-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+            </div>
+            <h4 class="mission-pillar-title">Interactive Learning</h4>
+            <p class="mission-pillar-desc">Visualizing blockchain states with live sandboxed simulation of transaction
+              blocks, proof-of-work mining, and cryptographic hashing cascades.</p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="mission-card">
+            <div class="mission-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="20" x2="12" y2="10" />
+                <line x1="18" y1="20" x2="18" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="16" />
+              </svg>
+            </div>
+            <h4 class="mission-pillar-title">Ecosystem Integration</h4>
+            <p class="mission-pillar-desc">Grounding conceptual theories in the active market by delivering real-time
+              price feeds and transaction ledgers from the broader Web3 ecosystem.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PAGE 2: CONCEPTS -->
+    <section id="concepts-page" class="page-view">
+      <div class="section-header">
+        <span class="section-tag">Fundamentals</span>
+        <h2 class="section-title">Web3 Concepts Explained</h2>
+        <p class="section-desc">Understand the technical design shifts defining the decentralized web through
+          interactive comparison cards.</p>
+      </div>
+
+      <!-- Web3 Glossary Section (Relocated to Top) -->
+      <div class="glass-panel" style="margin-bottom: 48px; padding: 32px;">
+        <div class="section-header" style="margin-bottom: 32px; text-align: left;">
+          <span class="section-tag" style="margin-bottom: 8px;">Quick Reference</span>
+          <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 8px;">Web3 & Blockchain Glossary</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.95rem; margin: 0;">Short, digestible details on the
+            fundamental pillars of the decentralized web.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+          <!-- Blockchain -->
+          <div
+            style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; transition: var(--transition-smooth);"
+            onmouseover="this.style.borderColor='var(--color-primary)';"
+            onmouseout="this.style.borderColor='var(--border-color)';">
+            <h4
+              style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: var(--color-primary); display: flex; align-items: center; gap: 8px;">
+              🔗 Blockchain
+            </h4>
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5; margin: 0;">
+              A decentralized, distributed, and immutable digital ledger that cryptographically records transactions
+              across a peer-to-peer network, ensuring trust and consensus without central authorities.
+            </p>
+          </div>
+
+          <!-- Web Evolution -->
+          <div
+            style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; transition: var(--transition-smooth);"
+            onmouseover="this.style.borderColor='var(--color-success)';"
+            onmouseout="this.style.borderColor='var(--border-color)';">
+            <h4
+              style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: var(--color-success); display: flex; align-items: center; gap: 8px;">
+              🌐 Web Evolution (1, 2, 3)
+            </h4>
+            <div
+              style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5; display: flex; flex-direction: column; gap: 6px;">
+              <span><strong>Web1 (Read)</strong>: Static pages, read-only websites, directories, and no interactive
+                content.</span>
+              <span><strong>Web2 (Read-Write)</strong>: Centralized social platforms, cloud hosting, interactive
+                databases, and ads.</span>
+              <span><strong>Web3 (Read-Write-Own)</strong>: Cryptographic asset ownership, self-custodial wallets, and
+                trustless protocols.</span>
+            </div>
+          </div>
+
+          <!-- DeFi -->
+          <div
+            style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; transition: var(--transition-smooth);"
+            onmouseover="this.style.borderColor='var(--color-warning)';"
+            onmouseout="this.style.borderColor='var(--border-color)';">
+            <h4
+              style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: var(--color-warning); display: flex; align-items: center; gap: 8px;">
+              💸 DeFi (Decentralized Finance)
+            </h4>
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5; margin: 0;">
+              An umbrella term for financial applications (lending, borrowing, trading, staking) built on public smart
+              contract blockchains, replacing traditional bank intermediaries with automated, trustless code.
+            </p>
+          </div>
+
+          <!-- Layers -->
+          <div
+            style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; transition: var(--transition-smooth);"
+            onmouseover="this.style.borderColor='#a855f7';" onmouseout="this.style.borderColor='var(--border-color)';">
+            <h4
+              style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #a855f7; display: flex; align-items: center; gap: 8px;">
+              ⚡ Layers (L1 & L2)
+            </h4>
+            <div
+              style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5; display: flex; flex-direction: column; gap: 6px;">
+              <span><strong>Layer 1 (Settlement)</strong>: The base security layer blockchain (e.g. Ethereum) which
+                guarantees consensus and settlement.</span>
+              <span><strong>Layer 2 (Execution)</strong>: Scaling networks (e.g. Arbitrum) that execute transactions
+                off-chain, compressing and rollup-batching them to L1.</span>
+            </div>
+          </div>
+
+          <!-- Cryptography -->
+          <div
+            style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; transition: var(--transition-smooth);"
+            onmouseover="this.style.borderColor='#f43f5e';" onmouseout="this.style.borderColor='var(--border-color)';">
+            <h4
+              style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #f43f5e; display: flex; align-items: center; gap: 8px;">
+              🔑 Cryptography
+            </h4>
+            <div
+              style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5; display: flex; flex-direction: column; gap: 6px;">
+              <span><strong>Hashing (SHA-256)</strong>: One-way function to secure ledger data and compute digital
+                footprints.</span>
+              <span><strong>Asymmetric Keys</strong>: Public key (wallet address) for identification; private key
+                (signature) to spend funds.</span>
+            </div>
+          </div>
+
+          <!-- Smart Contracts -->
+          <div
+            style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; transition: var(--transition-smooth);"
+            onmouseover="this.style.borderColor='#3b82f6';"
+            onmouseout="this.style.borderColor='var(--border-color)';">
+            <h4
+              style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #3b82f6; display: flex; align-items: center; gap: 8px;">
+              📝 Smart Contracts
+            </h4>
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5; margin: 0;">
+              Self-executing digital contracts on a blockchain where agreement terms are directly written into code, executing automatically when pre-defined criteria are met without middlemen.
+            </p>
+          </div>
+
+          <!-- DAOs -->
+          <div
+            style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; transition: var(--transition-smooth);"
+            onmouseover="this.style.borderColor='#ec4899';"
+            onmouseout="this.style.borderColor='var(--border-color)';">
+            <h4
+              style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #ec4899; display: flex; align-items: center; gap: 8px;">
+              👥 DAOs (Decentralized Orgs)
+            </h4>
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5; margin: 0;">
+              Decentralized Autonomous Organizations governed by smart contracts and token-holders rather than central executive boards, enabling member-owned, collaborative decision-making.
+            </p>
+          </div>
+
+          <!-- Consensus Mechanisms -->
+          <div
+            style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; transition: var(--transition-smooth);"
+            onmouseover="this.style.borderColor='#f59e0b';"
+            onmouseout="this.style.borderColor='var(--border-color)';">
+            <h4
+              style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #f59e0b; display: flex; align-items: center; gap: 8px;">
+              🤝 Consensus Mechanisms
+            </h4>
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.5; margin: 0;">
+              Protocols like Proof of Work (PoW) and Proof of Stake (PoS) that allow distributed computer networks to agree on the correct ledger state, securing the network from fraud.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="concepts-grid">
+        <!-- Concept 1: Web2 vs Web3 -->
+        <div class="glass-panel concept-card" data-concept="web2-web3">
+          <div class="concept-card-header">
+            <h3 class="concept-card-title">Web2 vs Web3</h3>
+            <div class="concept-tabs">
+              <button class="concept-tab-btn active" data-tab="compare">Compare</button>
+              <button class="concept-tab-btn" data-tab="meters">Trade-offs</button>
+              <button class="concept-tab-btn" data-tab="analogy">Analogy</button>
+            </div>
+          </div>
+
+          <!-- TAB 1: COMPARE (default) -->
+          <div class="concept-tab-content active" data-content="compare">
+            <div class="concept-sides-wrapper">
+              <!-- Left: Web2 -->
+              <div class="concept-side">
+                <div class="concept-header-bar">
+                  <div class="concept-icon-title">
+                    <div class="concept-icon icon-web2">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                        <line x1="6" y1="6" x2="6.01" y2="6" />
+                        <line x1="6" y1="18" x2="6.01" y2="18" />
+                      </svg>
+                    </div>
+                    <h3 class="concept-title-small">Web2</h3>
+                  </div>
+                  <span class="concept-badge badge-web2">Centralized Web</span>
+                </div>
+
+                <div class="comparison-rows">
+                  <div class="comparison-row" data-compare="storage">
+                    <span class="row-label">Data Storage</span>
+                    <p class="row-val">Stored on corporate central servers (AWS, Google Cloud, Azure).</p>
+                  </div>
+                  <div class="comparison-row" data-compare="identity">
+                    <span class="row-label">User Identity</span>
+                    <p class="row-val">Managed via company accounts and logins (OAuth, username/password).</p>
+                  </div>
+                  <div class="comparison-row" data-compare="monetization">
+                    <span class="row-label">Value Capture</span>
+                    <p class="row-val">Platforms collect user data and monetize it through targeted ads.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="failure">
+                    <span class="row-label">Failure Risk</span>
+                    <p class="row-val">Single points of failure, corporate censorship, and data breaches.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Web3 -->
+              <div class="concept-side">
+                <div class="concept-header-bar">
+                  <div class="concept-icon-title">
+                    <div class="concept-icon icon-web3">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        <path d="M2 12h20" />
+                      </svg>
+                    </div>
+                    <h3 class="concept-title-small">Web3</h3>
+                  </div>
+                  <span class="concept-badge badge-web3">Decentralized Web</span>
+                </div>
+
+                <div class="comparison-rows">
+                  <div class="comparison-row" data-compare="storage">
+                    <span class="row-label">Data Storage</span>
+                    <p class="row-val">Distributed across a peer-to-peer network (Ethereum, IPFS).</p>
+                  </div>
+                  <div class="comparison-row" data-compare="identity">
+                    <span class="row-label">User Identity</span>
+                    <p class="row-val">Managed via self-custodial public-private cryptographic keypairs.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="monetization">
+                    <span class="row-label">Value Capture</span>
+                    <p class="row-val">Users own their data, digital identity, and tokens, capturing direct value.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="failure">
+                    <span class="row-label">Failure Risk</span>
+                    <p class="row-val">No single point of failure, censorship-resistant, and permissionless.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: METERS -->
+          <div class="concept-tab-content" data-content="meters">
+            <div class="concept-meters-wrapper">
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Centralization Level</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-danger">Web2: 100%</span>
+                    <span class="val-web3 text-success">Web3: 0%</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar web2-bar" style="width: 0%;" data-val="100"></div>
+                  <div class="meter-bar web3-bar" style="width: 0%;" data-val="0"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Transaction Speed / Throughput</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-primary">Web2: 100% (Instant)</span>
+                    <span class="val-web3 text-success">Web3: 45% (Consensus Overhead)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar web2-bar" style="width: 0%;" data-val="100"></div>
+                  <div class="meter-bar web3-bar" style="width: 0%;" data-val="45"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">User Ownership & Control</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-danger">Web2: 5% (Platform Bound)</span>
+                    <span class="val-web3 text-success">Web3: 100% (Self-Custody)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar web2-bar" style="width: 0%;" data-val="5"></div>
+                  <div class="meter-bar web3-bar" style="width: 0%;" data-val="100"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Censorship Resistance</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-danger">Web2: 15% (Central Authority)</span>
+                    <span class="val-web3 text-success">Web3: 98% (Immutable Protocol)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar web2-bar" style="width: 0%;" data-val="15"></div>
+                  <div class="meter-bar web3-bar" style="width: 0%;" data-val="98"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: ANALOGY -->
+          <div class="concept-tab-content" data-content="analogy">
+            <div class="concept-analogy-wrapper">
+              <div class="analogy-quote">
+                <span class="quote-mark">“</span>
+                <p class="quote-text">Web2 is like renting a house: the landlord (platform) owns the walls, can evict you, and controls who visits. Web3 is like owning your own condo: you have the title deed (private keys), and nobody can kick you out.</p>
+              </div>
+              <div class="examples-grid-small">
+                <div class="example-box web2-ex">
+                  <h5>Web2 Paradigm</h5>
+                  <ul>
+                    <li>Twitter/X can suspend your account & take your followers.</li>
+                    <li>Google owns your email and scans it for advertising data.</li>
+                    <li>Your bank controls your funds and can freeze your account.</li>
+                  </ul>
+                </div>
+                <div class="example-box web3-ex">
+                  <h5>Web3 Paradigm</h5>
+                  <ul>
+                    <li>Farcaster/Lens profiles are self-owned NFTs you control.</li>
+                    <li>IPFS/Ethereum stores files and code immutably.</li>
+                    <li>You sign self-custodial wallet transactions directly.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="concept-bottom-line">
+            <strong>The Bottom Line:</strong> Web2 is about centralized platforms hosting and controlling your data,
+            whereas Web3 shifts power back to the user through cryptographic ownership.
+          </div>
+        </div>
+
+        <!-- Concept 2: Ethereum vs Bitcoin -->
+        <div class="glass-panel concept-card" data-concept="eth-btc">
+          <div class="concept-card-header">
+            <h3 class="concept-card-title">Ethereum vs Bitcoin</h3>
+            <div class="concept-tabs">
+              <button class="concept-tab-btn active" data-tab="compare">Compare</button>
+              <button class="concept-tab-btn" data-tab="meters">Trade-offs</button>
+              <button class="concept-tab-btn" data-tab="analogy">Analogy</button>
+            </div>
+          </div>
+
+          <!-- TAB 1: COMPARE -->
+          <div class="concept-tab-content active" data-content="compare">
+            <div class="concept-sides-wrapper">
+              <!-- Left: Bitcoin -->
+              <div class="concept-side">
+                <div class="concept-header-bar">
+                  <div class="concept-icon-title">
+                    <div class="concept-icon icon-btc">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 6v12M9 8h4.5a2.5 2.5 0 0 1 0 5H9M9 13h5.5a2.5 2.5 0 0 1 0 5H9" />
+                      </svg>
+                    </div>
+                    <h3 class="concept-title-small">Bitcoin</h3>
+                  </div>
+                  <span class="concept-badge badge-btc">Store of Value</span>
+                </div>
+
+                <div class="comparison-rows">
+                  <div class="comparison-row" data-compare="purpose">
+                    <span class="row-label">Primary Purpose</span>
+                    <p class="row-val">Designed as a peer-to-peer electronic cash and alternative payment system.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="programmability">
+                    <span class="row-label">Programmability</span>
+                    <p class="row-val">Simple script system, intentionally limited to prevent bugs and security risks.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="consensus">
+                    <span class="row-label">Consensus Mechanism</span>
+                    <p class="row-val">Secured by Proof of Work (ASIC miners computing heavy cryptographic hashes).</p>
+                  </div>
+                  <div class="comparison-row" data-compare="economics">
+                    <span class="row-label">Token Economics</span>
+                    <p class="row-val">Hard-capped supply of 21 Million coins, making it highly deflationary.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Ethereum -->
+              <div class="concept-side">
+                <div class="concept-header-bar">
+                  <div class="concept-icon-title">
+                    <div class="concept-icon icon-eth">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 12h20L12 2zM2 12l10 10 10-10H2zM12 2v20" />
+                      </svg>
+                    </div>
+                    <h3 class="concept-title-small">Ethereum</h3>
+                  </div>
+                  <span class="concept-badge badge-eth">World Computer</span>
+                </div>
+
+                <div class="comparison-rows">
+                  <div class="comparison-row" data-compare="purpose">
+                    <span class="row-label">Primary Purpose</span>
+                    <p class="row-val">Designed as an open-ended platform for smart contracts and trustless computation.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="programmability">
+                    <span class="row-label">Programmability</span>
+                    <p class="row-val">Turing-complete language (Solidity) allowing developers to build complex dApps.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="consensus">
+                    <span class="row-label">Consensus Mechanism</span>
+                    <p class="row-val">Secured by Proof of Stake (validators staking ETH to secure the network).</p>
+                  </div>
+                  <div class="comparison-row" data-compare="economics">
+                    <span class="row-label">Token Economics</span>
+                    <p class="row-val">Dynamic supply model with a transaction fee burning mechanism.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: METERS -->
+          <div class="concept-tab-content" data-content="meters">
+            <div class="concept-meters-wrapper">
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Store of Value Security (Hard Cap)</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-warning">Bitcoin: 100% (21M Cap)</span>
+                    <span class="val-web3 text-primary">Ethereum: 75% (Dynamic Supply)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar btc-bar" style="width: 0%;" data-val="100"></div>
+                  <div class="meter-bar eth-bar" style="width: 0%;" data-val="75"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Smart Contract Programmability</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-warning">Bitcoin: 15% (Basic Scripts)</span>
+                    <span class="val-web3 text-primary">Ethereum: 100% (Turing Complete)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar btc-bar" style="width: 0%;" data-val="15"></div>
+                  <div class="meter-bar eth-bar" style="width: 0%;" data-val="100"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Transaction Throughput (Base Layer)</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-warning">Bitcoin: 25% (~7 TPS)</span>
+                    <span class="val-web3 text-primary">Ethereum: 60% (~15-30 TPS L1)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar btc-bar" style="width: 0%;" data-val="25"></div>
+                  <div class="meter-bar eth-bar" style="width: 0%;" data-val="60"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Eco-Friendly Consensus</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-warning">Bitcoin: 10% (Energy Intensive PoW)</span>
+                    <span class="val-web3 text-primary">Ethereum: 99% (Proof of Stake)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar btc-bar" style="width: 0%;" data-val="10"></div>
+                  <div class="meter-bar eth-bar" style="width: 0%;" data-val="99"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: ANALOGY -->
+          <div class="concept-tab-content" data-content="analogy">
+            <div class="concept-analogy-wrapper">
+              <div class="analogy-quote">
+                <span class="quote-mark">“</span>
+                <p class="quote-text">Bitcoin is like pure, physical Gold—scarce, heavy, and stored in a vault to protect wealth. Ethereum is like Electricity—a programmable power grid that runs factories, smart appliances, and global software applications.</p>
+              </div>
+              <div class="examples-grid-small">
+                <div class="example-box btc-ex">
+                  <h5>Bitcoin Paradigm</h5>
+                  <ul>
+                    <li>Held as a long-term hedge against fiat inflation.</li>
+                    <li>Sovereign wealth reserves and institutional balance sheets.</li>
+                    <li>Simple wallet-to-wallet transfers of value.</li>
+                  </ul>
+                </div>
+                <div class="example-box eth-ex">
+                  <h5>Ethereum Paradigm</h5>
+                  <ul>
+                    <li>Lending protocols, automated market makers (DeFi).</li>
+                    <li>NFT minting and dynamic smart contracts.</li>
+                    <li>Layer 2 rollup scaling solutions (Arbitrum, Optimism).</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="concept-bottom-line">
+            <strong>The Bottom Line:</strong> Bitcoin acts as "digital gold" to securely store and transfer value, while
+            Ethereum acts as a decentralized global computer to run arbitrary programs.
+          </div>
+        </div>
+
+        <!-- Concept 3: Public Keys vs Private Keys -->
+        <div class="glass-panel concept-card" data-concept="pub-priv">
+          <div class="concept-card-header">
+            <h3 class="concept-card-title">Public Key vs Private Key</h3>
+            <div class="concept-tabs">
+              <button class="concept-tab-btn active" data-tab="compare">Compare</button>
+              <button class="concept-tab-btn" data-tab="meters">Trade-offs</button>
+              <button class="concept-tab-btn" data-tab="analogy">Analogy</button>
+              <button class="concept-tab-btn" data-tab="simulator">Simulator</button>
+            </div>
+          </div>
+
+          <!-- TAB 1: COMPARE -->
+          <div class="concept-tab-content active" data-content="compare">
+            <div class="concept-sides-wrapper">
+              <!-- Left: Public Key -->
+              <div class="concept-side">
+                <div class="concept-header-bar">
+                  <div class="concept-icon-title">
+                    <div class="concept-icon icon-pub">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                      </svg>
+                    </div>
+                    <h3 class="concept-title-small">Public Key</h3>
+                  </div>
+                  <span class="concept-badge badge-pub">Wallet Address</span>
+                </div>
+
+                <div class="comparison-rows">
+                  <div class="comparison-row" data-compare="sharing">
+                    <span class="row-label">Shareability</span>
+                    <p class="row-val">Safely shared with anyone; equivalent to your email or bank routing number.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="function">
+                    <span class="row-label">Primary Function</span>
+                    <p class="row-val">Used by other users to identify your account and send you digital assets.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="derivation">
+                    <span class="row-label">Derivation</span>
+                    <p class="row-val">Derived mathematically from the private key (impossible to reverse).</p>
+                  </div>
+                  <div class="comparison-row" data-compare="visibility">
+                    <span class="row-label">Ledger Visibility</span>
+                    <p class="row-val">Fully visible on the public blockchain explorer to audit transactions.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Private Key -->
+              <div class="concept-side">
+                <div class="concept-header-bar">
+                  <div class="concept-icon-title">
+                    <div class="concept-icon icon-priv">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                      </svg>
+                    </div>
+                    <h3 class="concept-title-small">Private Key</h3>
+                  </div>
+                  <span class="concept-badge badge-priv">Digital Signature</span>
+                </div>
+
+                <div class="comparison-rows">
+                  <div class="comparison-row" data-compare="sharing">
+                    <span class="row-label">Shareability</span>
+                    <p class="row-val">Must NEVER be shared; anyone with access controls all funds in your wallet.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="function">
+                    <span class="row-label">Primary Function</span>
+                    <p class="row-val">Used to cryptographically sign and authorize outbound transactions.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="derivation">
+                    <span class="row-label">Derivation</span>
+                    <p class="row-val">Generated randomly at wallet creation; serves as the master secret key.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="visibility">
+                    <span class="row-label">Ledger Visibility</span>
+                    <p class="row-val">Stored locally and encrypted on your device; never published to the ledger.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: METERS -->
+          <div class="concept-tab-content" data-content="meters">
+            <div class="concept-meters-wrapper">
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Disclosure Safety (Risk of Sharing)</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-success">Public Key: 100% (Fully Public)</span>
+                    <span class="val-web3 text-danger">Private Key: 0% (Fatal if Shared)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar pub-bar" style="width: 0%;" data-val="100"></div>
+                  <div class="meter-bar priv-bar" style="width: 0%;" data-val="0"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Security Burden (Risk on Loss)</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-success">Public Key: 5% (Recoverable)</span>
+                    <span class="val-web3 text-danger">Private Key: 100% (Irrevocable Loss)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar pub-bar" style="width: 0%;" data-val="5"></div>
+                  <div class="meter-bar priv-bar" style="width: 0%;" data-val="100"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Transaction Authority</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-success">Public Key: 20% (Identifies Account)</span>
+                    <span class="val-web3 text-danger">Private Key: 100% (Signs/Authorizes)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar pub-bar" style="width: 0%;" data-val="20"></div>
+                  <div class="meter-bar priv-bar" style="width: 0%;" data-val="100"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Random Mathematical Entropy</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-success">Public Key: 80% (Deterministic)</span>
+                    <span class="val-web3 text-danger">Private Key: 100% (Pure Randomness)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar pub-bar" style="width: 0%;" data-val="80"></div>
+                  <div class="meter-bar priv-bar" style="width: 0%;" data-val="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: ANALOGY -->
+          <div class="concept-tab-content" data-content="analogy">
+            <div class="concept-analogy-wrapper">
+              <div class="analogy-quote">
+                <span class="quote-mark">“</span>
+                <p class="quote-text">Your Public Key is like your home mailing address—anyone can look it up and drop letters in your mailbox. Your Private Key is the physical metal key to the mailbox—only you hold it, and you need it to open the box and send/spend items.</p>
+              </div>
+              <div class="examples-grid-small">
+                <div class="example-box pub-ex">
+                  <h5>Public Key Actions</h5>
+                  <ul>
+                    <li>Share with a friend so they can send you 10 USDC.</li>
+                    <li>Check on Etherscan to view transaction history.</li>
+                    <li>Connected to a dApp frontend to identify your profile.</li>
+                  </ul>
+                </div>
+                <div class="example-box priv-ex">
+                  <h5>Private Key Actions</h5>
+                  <ul>
+                    <li>Written as a 12-word seed phrase on paper.</li>
+                    <li>Used inside MetaMask to sign transactions securely.</li>
+                    <li>Stored inside hardware wallets (Ledger/Trezor) offline.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: SIMULATOR (Sandbox) -->
+          <div class="concept-tab-content" data-content="simulator">
+            <div class="keypair-simulator">
+              <div class="sim-controls-row">
+                <button class="btn btn-primary" id="sim-gen-keys-btn">Generate Cryptographic Keypair</button>
+              </div>
+              <div class="sim-keys-display">
+                <div class="sim-key-box private-key-box">
+                  <label>🔑 Private Key (KEEP SECRET!)</label>
+                  <div class="key-value-wrapper">
+                    <input type="text" id="sim-priv-key" readonly placeholder="Click generate to create private key...">
+                    <span class="key-warning">⚠️ DO NOT SHARE THIS KEY</span>
+                  </div>
+                </div>
+                <div class="sim-key-box public-key-box">
+                  <label>🔗 Public Key / Wallet Address (SHAREABLE)</label>
+                  <div class="key-value-wrapper">
+                    <input type="text" id="sim-pub-key" readonly placeholder="Address will be derived from private key...">
+                    <span class="key-info">✔️ Safe to share publicly</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Message signing section -->
+              <div class="sim-signing-section" id="sim-signing-section" style="display: none;">
+                <h4>✍️ Step 2: Sign a Transaction Message</h4>
+                <p class="sim-section-desc">Create a digital signature. This proves ownership of the private key without revealing it.</p>
+                <div class="sim-message-box">
+                  <label>Transaction Message:</label>
+                  <input type="text" id="sim-msg-input" value="Send 5 ETH to Alice (0x71C...39)">
+                  <button class="btn btn-secondary" id="sim-sign-msg-btn" style="margin-top: 8px;">Create Digital Signature</button>
+                </div>
+                <div class="sim-signature-box" style="margin-top: 16px;">
+                  <label>🔏 Cryptographic Signature:</label>
+                  <textarea id="sim-sig-output" readonly placeholder="Signature will appear here..."></textarea>
+                </div>
+              </div>
+
+              <!-- Verification section -->
+              <div class="sim-verification-section" id="sim-verification-section" style="display: none;">
+                <h4>🔍 Step 3: Verify the Signature</h4>
+                <p class="sim-section-desc">The blockchain nodes verify that the signature is valid for your public address and message.</p>
+                <div class="verification-card glass-panel">
+                  <div class="verif-check-row">
+                    <span class="verif-label">Valid Public Key:</span>
+                    <span class="verif-val" id="verif-pub-key">--</span>
+                  </div>
+                  <div class="verif-check-row">
+                    <span class="verif-label">Verifying Message:</span>
+                    <span class="verif-val" id="verif-msg">--</span>
+                  </div>
+                  <div class="verif-check-row">
+                    <span class="verif-label">Verification Result:</span>
+                    <span class="verif-status" id="verif-status">⌛ Waiting to verify...</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="concept-bottom-line">
+            <strong>The Bottom Line:</strong> Your Public Key is your public account number where anyone can deposit
+            tokens, while your Private Key is the master key to sign and spend them.
+          </div>
+        </div>
+
+        <!-- Concept 4: Databases vs Blockchains -->
+        <div class="glass-panel concept-card" data-concept="db-bc">
+          <div class="concept-card-header">
+            <h3 class="concept-card-title">Blockchain vs Traditional Databases</h3>
+            <div class="concept-tabs">
+              <button class="concept-tab-btn active" data-tab="compare">Compare</button>
+              <button class="concept-tab-btn" data-tab="meters">Trade-offs</button>
+              <button class="concept-tab-btn" data-tab="analogy">Analogy</button>
+            </div>
+          </div>
+
+          <!-- TAB 1: COMPARE -->
+          <div class="concept-tab-content active" data-content="compare">
+            <div class="concept-sides-wrapper">
+              <!-- Left: Database -->
+              <div class="concept-side">
+                <div class="concept-header-bar">
+                  <div class="concept-icon-title">
+                    <div class="concept-icon icon-db">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <ellipse cx="12" cy="5" rx="9" ry="3" />
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                        <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
+                      </svg>
+                    </div>
+                    <h3 class="concept-title-small">Traditional Database</h3>
+                  </div>
+                  <span class="concept-badge badge-db">Centralized State</span>
+                </div>
+
+                <div class="comparison-rows">
+                  <div class="comparison-row" data-compare="authority">
+                    <span class="row-label">Control Authority</span>
+                    <p class="row-val">Managed by a single administrator, enterprise, or central server provider.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="mutability">
+                    <span class="row-label">Data Mutability</span>
+                    <p class="row-val">Fully mutable: supports CRUD (Create, Read, Update, Delete) operations.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="consensus-db">
+                    <span class="row-label">State Validation</span>
+                    <p class="row-val">No consensus protocol needed; trust is placed in the central server.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="speed">
+                    <span class="row-label">Read/Write Speed</span>
+                    <p class="row-val">Extremely fast processing with sub-millisecond response times.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Blockchain -->
+              <div class="concept-side">
+                <div class="concept-header-bar">
+                  <div class="concept-icon-title">
+                    <div class="concept-icon icon-bc">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="8" height="8" rx="2" />
+                        <rect x="14" y="14" width="8" height="8" rx="2" />
+                        <path d="M10 6h4v8h4" />
+                      </svg>
+                    </div>
+                    <h3 class="concept-title-small">Blockchain Ledger</h3>
+                  </div>
+                  <span class="concept-badge badge-bc">Decentralized State</span>
+                </div>
+
+                <div class="comparison-rows">
+                  <div class="comparison-row" data-compare="authority">
+                    <span class="row-label">Control Authority</span>
+                    <p class="row-val">Distributed across a global peer-to-peer network of validator nodes.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="mutability">
+                    <span class="row-label">Data Mutability</span>
+                    <p class="row-val">Append-only: records can only be added, never modified or erased.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="consensus-db">
+                    <span class="row-label">State Validation</span>
+                    <p class="row-val">Requires cryptographic consensus (PoW or PoS) to validate new entries.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="speed">
+                    <span class="row-label">Read/Write Speed</span>
+                    <p class="row-val">Slower throughput due to network verification overhead.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: METERS -->
+          <div class="concept-tab-content" data-content="meters">
+            <div class="concept-meters-wrapper">
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Write Speed & Transaction Throughput</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-secondary">Database: 100% (Sub-millisecond)</span>
+                    <span class="val-web3 text-success">Blockchain: 20% (Consensus Wait)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar db-bar" style="width: 0%;" data-val="100"></div>
+                  <div class="meter-bar bc-bar" style="width: 0%;" data-val="20"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Data Mutability (Editability)</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-secondary">Database: 100% (Full CRUD)</span>
+                    <span class="val-web3 text-success">Blockchain: 0% (Immutable Ledger)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar db-bar" style="width: 0%;" data-val="100"></div>
+                  <div class="meter-bar bc-bar" style="width: 0%;" data-val="0"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Central Failure Risk</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-secondary">Database: 90% (Single Source)</span>
+                    <span class="val-web3 text-success">Blockchain: 5% (Distributed Nodes)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar db-bar" style="width: 0%;" data-val="90"></div>
+                  <div class="meter-bar bc-bar" style="width: 0%;" data-val="5"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Operator Trust Required</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-secondary">Database: 95% (Trust Server Admin)</span>
+                    <span class="val-web3 text-success">Blockchain: 5% (Trustless Math)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar db-bar" style="width: 0%;" data-val="95"></div>
+                  <div class="meter-bar bc-bar" style="width: 0%;" data-val="5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: ANALOGY -->
+          <div class="concept-tab-content" data-content="analogy">
+            <div class="concept-analogy-wrapper">
+              <div class="analogy-quote">
+                <span class="quote-mark">“</span>
+                <p class="quote-text">A Traditional Database is like a private diary: the owner can write in it, erase entries with white-out, or tear out pages at will. A Blockchain is like a giant stone monument in a town square: once a message is carved into it, it's permanent and visible to the whole town forever.</p>
+              </div>
+              <div class="examples-grid-small">
+                <div class="example-box db-ex">
+                  <h5>Database Use Cases</h5>
+                  <ul>
+                    <li>PostgreSQL storing temporary session tokens.</li>
+                    <li>Amazon product inventory catalogs updated live.</li>
+                    <li>Streaming history logs on Netflix for user recommendations.</li>
+                  </ul>
+                </div>
+                <div class="example-box bc-ex">
+                  <h5>Blockchain Use Cases</h5>
+                  <ul>
+                    <li>Arbitrum ledger recording transactions securely.</li>
+                    <li>Ethereum smart contracts running DeFi loan terms.</li>
+                    <li>Global token transfers requiring zero trust.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="concept-bottom-line">
+            <strong>The Bottom Line:</strong> Databases are built for high-performance centralized workloads, while
+            blockchains trade speed for trustless, immutable transparency.
+          </div>
+        </div>
+
+        <!-- Concept 5: Smart Contracts vs Traditional Digital Agreements -->
+        <div class="glass-panel concept-card" data-concept="smart-contracts">
+          <div class="concept-card-header">
+            <h3 class="concept-card-title">Smart Contracts vs Traditional Digital Agreements</h3>
+            <div class="concept-tabs">
+              <button class="concept-tab-btn active" data-tab="compare">Compare</button>
+              <button class="concept-tab-btn" data-tab="meters">Trade-offs</button>
+              <button class="concept-tab-btn" data-tab="analogy">Analogy</button>
+            </div>
+          </div>
+
+          <!-- TAB 1: COMPARE -->
+          <div class="concept-tab-content active" data-content="compare">
+            <div class="concept-sides-wrapper">
+              <!-- Left: Traditional -->
+              <div class="concept-side">
+                <div class="concept-header-bar">
+                  <div class="concept-icon-title">
+                    <div class="concept-icon icon-trad">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                      </svg>
+                    </div>
+                    <h3 class="concept-title-small">Traditional Agreement</h3>
+                  </div>
+                  <span class="concept-badge badge-trad">Legal Paper / Digital Doc</span>
+                </div>
+
+                <div class="comparison-rows">
+                  <div class="comparison-row" data-compare="enforcement">
+                    <span class="row-label">Enforcement</span>
+                    <p class="row-val">Enforced by local courts and legal systems; relies on legal action to resolve breaches.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="flexibility">
+                    <span class="row-label">Flexibility</span>
+                    <p class="row-val">Highly flexible: can be modified, amended, or canceled if both parties agree.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="execution">
+                    <span class="row-label">Execution Mechanism</span>
+                    <p class="row-val">Manual or relies on intermediary platforms (e.g. banks, escrow agents).</p>
+                  </div>
+                  <div class="comparison-row" data-compare="interpretation">
+                    <span class="row-label">Interpretation</span>
+                    <p class="row-val">Subjective: text is interpreted by lawyers, judges, and arbitrators based on intent.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Smart Contract -->
+              <div class="concept-side">
+                <div class="concept-header-bar">
+                  <div class="concept-icon-title">
+                    <div class="concept-icon icon-smart">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                      </svg>
+                    </div>
+                    <h3 class="concept-title-small">Smart Contract</h3>
+                  </div>
+                  <span class="concept-badge badge-smart">On-Chain Code</span>
+                </div>
+
+                <div class="comparison-rows">
+                  <div class="comparison-row" data-compare="enforcement">
+                    <span class="row-label">Enforcement</span>
+                    <p class="row-val">Enforced automatically by cryptographic consensus; code is law and execution is guaranteed.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="flexibility">
+                    <span class="row-label">Flexibility</span>
+                    <p class="row-val">Strictly immutable: once deployed on-chain, code terms cannot be altered or stopped.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="execution">
+                    <span class="row-label">Execution Mechanism</span>
+                    <p class="row-val">Autonomous: self-executes programmatically when pre-defined criteria are met.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="interpretation">
+                    <span class="row-label">Interpretation</span>
+                    <p class="row-val">Objective: binary execution logic where criteria either evaluate to true or false.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: METERS -->
+          <div class="concept-tab-content" data-content="meters">
+            <div class="concept-meters-wrapper">
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Execution Automation</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-secondary">Traditional: 15% (Manual)</span>
+                    <span class="val-web3 text-success">Smart Contract: 100% (Autonomous)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar trad-bar" style="width: 0%;" data-val="15"></div>
+                  <div class="meter-bar smart-bar" style="width: 0%;" data-val="100"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Post-Signing Amendability (Flexibility)</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-secondary">Traditional: 90% (Amendable)</span>
+                    <span class="val-web3 text-success">Smart Contract: 0% (Immutable)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar trad-bar" style="width: 0%;" data-val="90"></div>
+                  <div class="meter-bar smart-bar" style="width: 0%;" data-val="0"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Human Discretion & Subjectivity</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-secondary">Traditional: 100% (Judge/Lawyer)</span>
+                    <span class="val-web3 text-success">Smart Contract: 5% (Math Code)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar trad-bar" style="width: 0%;" data-val="100"></div>
+                  <div class="meter-bar smart-bar" style="width: 0%;" data-val="5"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Code Dependency (Exploit Risk)</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-secondary">Traditional: 5% (Plain Language)</span>
+                    <span class="val-web3 text-success">Smart Contract: 95% (Bug Vulnerability)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar trad-bar" style="width: 0%;" data-val="5"></div>
+                  <div class="meter-bar smart-bar" style="width: 0%;" data-val="95"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: ANALOGY -->
+          <div class="concept-tab-content" data-content="analogy">
+            <div class="concept-analogy-wrapper">
+              <div class="analogy-quote">
+                <span class="quote-mark">“</span>
+                <p class="quote-text">A Traditional Agreement is like hiring a human cashier: you order, and if they disagree, make a mistake, or decide to hold your money, you must argue or go to court. A Smart Contract is like a vending machine: if you insert the correct coins, the machine is mathematically bound by its internal gear logic to drop the snack—no human discussion, no middleman, and zero delay.</p>
+              </div>
+              <div class="examples-grid-small">
+                <div class="example-box db-ex">
+                  <h5>Traditional Examples</h5>
+                  <ul>
+                    <li>Paper apartment rental lease agreements.</li>
+                    <li>DocuSign NDAs (Non-Disclosure Agreements).</li>
+                    <li>Bank escrow accounts for real estate deals.</li>
+                  </ul>
+                </div>
+                <div class="example-box bc-ex">
+                  <h5>Smart Contract Examples</h5>
+                  <ul>
+                    <li>Automated decentralized exchanges (Uniswap pools).</li>
+                    <li>Decentralized lending pools releasing collateral (Aave).</li>
+                    <li>DAO treasuries executing votes programmatically.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="concept-bottom-line">
+            <strong>The Bottom Line:</strong> Traditional agreements rely on legal structures and human trust, while
+            smart contracts use immutable, self-executing code to ensure deterministic execution.
+          </div>
+        </div>
+
+        <!-- Concept 6: Fungible Tokens vs Non-Fungible Tokens (NFTs) -->
+        <div class="glass-panel concept-card" data-concept="tokens">
+          <div class="concept-card-header">
+            <h3 class="concept-card-title">Fungible Tokens vs Non-Fungible Tokens (NFTs)</h3>
+            <div class="concept-tabs">
+              <button class="concept-tab-btn active" data-tab="compare">Compare</button>
+              <button class="concept-tab-btn" data-tab="meters">Trade-offs</button>
+              <button class="concept-tab-btn" data-tab="analogy">Analogy</button>
+            </div>
+          </div>
+
+          <!-- TAB 1: COMPARE -->
+          <div class="concept-tab-content active" data-content="compare">
+            <div class="concept-sides-wrapper">
+              <!-- Left: Fungible -->
+              <div class="concept-side">
+                <div class="concept-header-bar">
+                  <div class="concept-icon-title">
+                    <div class="concept-icon icon-fung">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="8" x2="12" y2="16" />
+                        <line x1="8" y1="12" x2="16" y2="12" />
+                      </svg>
+                    </div>
+                    <h3 class="concept-title-small">Fungible Token</h3>
+                  </div>
+                  <span class="concept-badge badge-fung">Standard ERC-20 / Currency</span>
+                </div>
+
+                <div class="comparison-rows">
+                  <div class="comparison-row" data-compare="interchangeability">
+                    <span class="row-label">Interchangeability</span>
+                    <p class="row-val">100% interchangeable: any unit is identical in value and traits to any other unit (like a $1 bill).</p>
+                  </div>
+                  <div class="comparison-row" data-compare="uniqueness">
+                    <span class="row-label">Uniqueness</span>
+                    <p class="row-val">No unique traits: tokens share the same contract code and lack individual identifiers.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="divisibility">
+                    <span class="row-label">Divisibility</span>
+                    <p class="row-val">Highly divisible: can be fractionalized (e.g. sending 0.0001 ETH, up to 18 decimal places).</p>
+                  </div>
+                  <div class="comparison-row" data-compare="use-cases">
+                    <span class="row-label">Standard Use Cases</span>
+                    <p class="row-val">Used for utility payment, transaction gas fees, stablecoins, and governance voting weights.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Non-Fungible -->
+              <div class="concept-side">
+                <div class="concept-header-bar">
+                  <div class="concept-icon-title">
+                    <div class="concept-icon icon-nft">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <circle cx="8.5" cy="8.5" r="1.5" />
+                        <polyline points="21 15 16 10 5 21" />
+                      </svg>
+                    </div>
+                    <h3 class="concept-title-small">Non-Fungible Token (NFT)</h3>
+                  </div>
+                  <span class="concept-badge badge-nft">Standard ERC-721 / Unique Asset</span>
+                </div>
+
+                <div class="comparison-rows">
+                  <div class="comparison-row" data-compare="interchangeability">
+                    <span class="row-label">Interchangeability</span>
+                    <p class="row-val">Non-interchangeable: each token has unique identity and metadata and cannot be swapped 1-to-1.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="uniqueness">
+                    <span class="row-label">Uniqueness</span>
+                    <p class="row-val">Fully unique: each token is minted with a distinct Token ID linked to specific metadata/art.</p>
+                  </div>
+                  <div class="comparison-row" data-compare="divisibility">
+                    <span class="row-label">Divisibility</span>
+                    <p class="row-val">Typically non-divisible: must be owned and transferred as a whole item (1 token).</p>
+                  </div>
+                  <div class="comparison-row" data-compare="use-cases">
+                    <span class="row-label">Standard Use Cases</span>
+                    <p class="row-val">Used for digital artwork, domain names (ENS), collectibles, game items, and property deeds.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: METERS -->
+          <div class="concept-tab-content" data-content="meters">
+            <div class="concept-meters-wrapper">
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Trait Uniqueness & Metadata Distinctness</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-secondary">Fungible: 0% (Identical Units)</span>
+                    <span class="val-web3 text-success">NFT: 100% (Unique Metadata)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar fung-bar" style="width: 0%;" data-val="0"></div>
+                  <div class="meter-bar nft-bar" style="width: 0%;" data-val="100"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Fractional Divisibility</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-secondary">Fungible: 100% (Divisible to 18 decimals)</span>
+                    <span class="val-web3 text-success">NFT: 5% (Whole units only)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar fung-bar" style="width: 0%;" data-val="100"></div>
+                  <div class="meter-bar nft-bar" style="width: 0%;" data-val="5"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">1-to-1 Interchangeability</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-secondary">Fungible: 100% (Identical swap)</span>
+                    <span class="val-web3 text-success">NFT: 0% (Value differs by item)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar fung-bar" style="width: 0%;" data-val="100"></div>
+                  <div class="meter-bar nft-bar" style="width: 0%;" data-val="0"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-info">
+                  <span class="meter-label">Market Liquidity (Instant Swaps)</span>
+                  <div class="meter-values">
+                    <span class="val-web2 text-secondary">Fungible: 95% (High volume books)</span>
+                    <span class="val-web3 text-success">NFT: 25% (Requires matching buyer)</span>
+                  </div>
+                </div>
+                <div class="dual-meter">
+                  <div class="meter-bar fung-bar" style="width: 0%;" data-val="95"></div>
+                  <div class="meter-bar nft-bar" style="width: 0%;" data-val="25"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: ANALOGY -->
+          <div class="concept-tab-content" data-content="analogy">
+            <div class="concept-analogy-wrapper">
+              <div class="analogy-quote">
+                <span class="quote-mark">“</span>
+                <p class="quote-text">Fungible Tokens are like dollar bills: if you lend Alice a $10 bill, you don't care if she returns the exact same physical bill or a different one—they are interchangeable. Non-Fungible Tokens are like concert tickets or land deeds: if you buy a front-row ticket for a specific date, you cannot swap it for a nosebleed ticket on a different day. Each represents a specific, unique claim of ownership.</p>
+              </div>
+              <div class="examples-grid-small">
+                <div class="example-box pub-ex">
+                  <h5>Fungible Examples</h5>
+                  <ul>
+                    <li>Stablecoins like USDC and USDT.</li>
+                    <li>Native layer-1 assets (BTC, ETH, SOL).</li>
+                    <li>DeFi governance tokens (UNI, AAVE).</li>
+                  </ul>
+                </div>
+                <div class="example-box priv-ex">
+                  <h5>Non-Fungible Examples</h5>
+                  <ul>
+                    <li>Ethereum Name Service domain names (alice.eth).</li>
+                    <li>Digital art collections (CryptoPunks, Bored Apes).</li>
+                    <li>Tokenized assets (concert tickets, digital land).</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="concept-bottom-line">
+            <strong>The Bottom Line:</strong> Fungible tokens power transactional economies and currency units, while
+            non-fungible tokens represent unique digital ownership and provenance rights.
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Concepts Quiz Section -->
+      <div class="glass-panel quiz-section" style="margin-top: 48px; padding: 32px;">
+        <div class="section-header" style="margin-bottom: 32px; text-align: left;">
+          <span class="section-tag" style="margin-bottom: 8px;">Knowledge Check</span>
+          <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 8px;">Concept Check: Test Your Knowledge</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.95rem; margin: 0;">Confirm your understanding of core Web3 fundamentals by taking this mini quiz.</p>
+        </div>
+
+        <div class="quiz-container">
+          <!-- Question 1 -->
+          <div class="quiz-card" data-q="1">
+            <div class="quiz-question">
+              <span class="q-num">Q1.</span> What is the defining difference between Web2 and Web3 value capture?
+            </div>
+            <div class="quiz-options">
+              <button class="quiz-option" data-ans="a">Web3 uses faster servers, while Web2 relies on cloud databases.</button>
+              <button class="quiz-option correct" data-ans="b">Web2 monetizes user data centrally, whereas Web3 enables user ownership of digital assets and profiles.</button>
+              <button class="quiz-option" data-ans="c">Web2 allows self-custodial log-ins, while Web3 requires company OAuth permissions.</button>
+            </div>
+            <div class="quiz-feedback" style="display: none;">
+              <span class="feedback-badge"></span>
+              <p class="feedback-text">Correct! Web3 is centered around the "Read-Write-Own" model, giving users direct cryptographic ownership over their digital profiles and assets, rather than centralized platforms renting them out.</p>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="quiz-card" data-q="2" style="display: none;">
+            <div class="quiz-question">
+              <span class="q-num">Q2.</span> Why does Bitcoin have a more limited script language compared to Ethereum?
+            </div>
+            <div class="quiz-options">
+              <button class="quiz-option correct" data-ans="a">To minimize the security attack surface and focus strictly on being a stable, scarce store of value.</button>
+              <button class="quiz-option" data-ans="b">Because the Bitcoin network is too slow to execute any mathematical functions.</button>
+              <button class="quiz-option" data-ans="c">Because Bitcoin was built after Ethereum and wanted to be simpler.</button>
+            </div>
+            <div class="quiz-feedback" style="display: none;">
+              <span class="feedback-badge"></span>
+              <p class="feedback-text">Correct! Bitcoin's simplicity is an intentional design choice. Keeping the programming language non-Turing complete significantly reduces potential bugs, ensuring the asset network remains extremely secure and stable.</p>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="quiz-card" data-q="3" style="display: none;">
+            <div class="quiz-question">
+              <span class="q-num">Q3.</span> Which of the following is safe to share with public web applications?
+            </div>
+            <div class="quiz-options">
+              <button class="quiz-option" data-ans="a">Your 12-word seed phrase or private key.</button>
+              <button class="quiz-option correct" data-ans="b">Your public key or public wallet address.</button>
+              <button class="quiz-option" data-ans="c">Both public and private key details are safe to share.</button>
+            </div>
+            <div class="quiz-feedback" style="display: none;">
+              <span class="feedback-badge"></span>
+              <p class="feedback-text">Correct! Your public key/address functions like an email address; anyone can know it to send you funds. Your private key functions like the account password and must never be exposed.</p>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="quiz-card" data-q="4" style="display: none;">
+            <div class="quiz-question">
+              <span class="q-num">Q4.</span> What is a major trade-off when using a blockchain ledger over a traditional database?
+            </div>
+            <div class="quiz-options">
+              <button class="quiz-option" data-ans="a">Blockchains are centralized, which makes them less transparent than databases.</button>
+              <button class="quiz-option" data-ans="b">Blockchains have faster write throughput and higher speed.</button>
+              <button class="quiz-option correct" data-ans="c">Blockchains have slower write speeds and lower throughput due to distributed consensus overhead.</button>
+            </div>
+            <div class="quiz-feedback" style="display: none;">
+              <span class="feedback-badge"></span>
+              <p class="feedback-text">Correct! Blockchains trade read/write speed and throughput to achieve decentralized, trustless consensus and absolute immutability.</p>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="quiz-card" data-q="5" style="display: none;">
+            <div class="quiz-question">
+              <span class="q-num">Q5.</span> What makes a blockchain transaction "immutable"?
+            </div>
+            <div class="quiz-options">
+              <button class="quiz-option" data-ans="a">Central administrators verify and lock transactions in a secure server.</button>
+              <button class="quiz-option correct" data-ans="b">Each block contains the cryptographic hash of the previous block, forming a chained dependency.</button>
+              <button class="quiz-option" data-ans="c">Transactions are encrypted so that they cannot be read by anyone.</button>
+            </div>
+            <div class="quiz-feedback" style="display: none;">
+              <span class="feedback-badge"></span>
+              <p class="feedback-text">Correct! Each block links cryptographically to the prior block's hash. Modifying any block invalidates its hash and breaks the entire subsequent chain, demonstrating immutability.</p>
+            </div>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="quiz-card" data-q="6" style="display: none;">
+            <div class="quiz-question">
+              <span class="q-num">Q6.</span> What is a Layer 2 scaling solution (like Arbitrum) designed to do?
+            </div>
+            <div class="quiz-options">
+              <button class="quiz-option" data-ans="a">Replace Layer 1 completely by hosting a separate, competing network.</button>
+              <button class="quiz-option" data-ans="b">Mine new Bitcoins faster using custom ASIC chips.</button>
+              <button class="quiz-option correct" data-ans="c">Execute transactions off-chain for speed and lower fees, then settle them securely on Layer 1.</button>
+            </div>
+            <div class="quiz-feedback" style="display: none;">
+              <span class="feedback-badge"></span>
+              <p class="feedback-text">Correct! Layer 2 networks process transaction execution off-chain to save fees and time, and then report bundled batches back to the base Layer 1 blockchain for security.</p>
+            </div>
+          </div>
+
+          <!-- Question 7 -->
+          <div class="quiz-card" data-q="7" style="display: none;">
+            <div class="quiz-question">
+              <span class="q-num">Q7.</span> If you lose your self-custodial wallet's private key, who can reset it for you?
+            </div>
+            <div class="quiz-options">
+              <button class="quiz-option" data-ans="a">The blockchain's customer support team.</button>
+              <button class="quiz-option correct" data-ans="b">Nobody. There is no central authority; your funds are lost forever.</button>
+              <button class="quiz-option" data-ans="c">The dApp protocol developers.</button>
+            </div>
+            <div class="quiz-feedback" style="display: none;">
+              <span class="feedback-badge"></span>
+              <p class="feedback-text">Correct! Self-custodial means you are solely responsible. There is no central database or customer support that can recover or reset your private key.</p>
+            </div>
+          </div>
+
+          <!-- Question 8 -->
+          <div class="quiz-card" data-q="8" style="display: none;">
+            <div class="quiz-question">
+              <span class="q-num">Q8.</span> What does a "Proof of Stake" consensus mechanism require validator nodes to do?
+            </div>
+            <div class="quiz-options">
+              <button class="quiz-option" data-ans="a">Solve complex cryptographic puzzles using high-powered mining rigs.</button>
+              <button class="quiz-option correct" data-ans="b">Lock up/stake native tokens as collateral to earn the right to validate transactions.</button>
+              <button class="quiz-option" data-ans="c">Pay subscription fees to the database administrator.</button>
+            </div>
+            <div class="quiz-feedback" style="display: none;">
+              <span class="feedback-badge"></span>
+              <p class="feedback-text">Correct! Proof of Stake (PoS) validators stake cryptocurrency as collateral, aligning their financial incentives to act honestly when verifying transaction batches.</p>
+            </div>
+          </div>
+
+          <!-- Question 9 -->
+          <div class="quiz-card" data-q="9" style="display: none;">
+            <div class="quiz-question">
+              <span class="q-num">Q9.</span> What is the main security risk of Smart Contracts?
+            </div>
+            <div class="quiz-options">
+              <button class="quiz-option" data-ans="a">Central servers hosting the contract can be powered off.</button>
+              <button class="quiz-option correct" data-ans="b">Any bugs or vulnerabilities in the code are permanently locked on the blockchain and can be exploited.</button>
+              <button class="quiz-option" data-ans="c">High transaction fees make it impossible to write code.</button>
+            </div>
+            <div class="quiz-feedback" style="display: none;">
+              <span class="feedback-badge"></span>
+              <p class="feedback-text">Correct! Because smart contracts are immutable once deployed, any programming bug or vulnerability is public and cannot be easily patched, posing an exploit risk.</p>
+            </div>
+          </div>
+
+          <!-- Question 10 -->
+          <div class="quiz-card" data-q="10" style="display: none;">
+            <div class="quiz-question">
+              <span class="q-num">Q10.</span> What makes a Non-Fungible Token (NFT) different from a standard cryptocurrency token like USDC?
+            </div>
+            <div class="quiz-options">
+              <button class="quiz-option" data-ans="a">NFTs are always worth exactly one dollar.</button>
+              <button class="quiz-option" data-ans="b">NFTs are completely interchangeable, meaning any NFT is equal to any other.</button>
+              <button class="quiz-option correct" data-ans="c">Each NFT has a unique token identifier and metadata, representing ownership of a distinct asset.</button>
+            </div>
+            <div class="quiz-feedback" style="display: none;">
+              <span class="feedback-badge"></span>
+              <p class="feedback-text">Correct! NFTs (ERC-721) represent unique assets with individual identifiers and distinct metadata, while standard fungible tokens (ERC-20) are interchangeable currency units.</p>
+            </div>
+          </div>
+
+          <!-- Quiz Completion screen -->
+          <div class="quiz-completion" style="display: none; text-align: center; padding: 20px;">
+            <h4 style="font-size: 1.5rem; color: var(--color-success); margin-bottom: 12px;">🎉 Quiz Completed!</h4>
+            <p style="color: var(--color-text-secondary); margin-bottom: 24px;">You have successfully completed the Web3 Fundamentals Quiz. Your score: <span id="quiz-score-val" style="font-weight: bold; color: var(--color-primary);">0</span>/<span id="quiz-total-val" style="font-weight: bold; color: var(--color-primary);">10</span></p>
+            <button class="btn btn-primary" id="restart-quiz-btn">Restart Quiz</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- PAGE 3: LIVE PRICES -->
+    <section id="prices-page" class="page-view">
+      <div class="section-header">
+        <span class="section-tag">Market Watch</span>
+        <h2 class="section-title">Live Cryptocurrencies</h2>
+        <p class="section-desc">Real-time valuation metrics fetched directly from the CoinGecko public API.</p>
+      </div>
+
+      <div class="prices-controls">
+        <div class="search-box">
+          <input type="text" id="coin-search" placeholder="Search tokens (e.g., ETH, ARB)...">
+        </div>
+        <div class="refresh-container">
+          <span class="last-updated" id="last-updated-text">Updating...</span>
+          <button class="btn btn-secondary" id="refresh-prices-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: middle;">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+            </svg>
+            Refresh
+          </button>
+        </div>
+      </div>
+
+      <!-- Warning Banner (Dynamic Fallback Mode) -->
+      <div id="prices-rate-limit-banner" class="alert-banner" style="display: none;">
+        <span class="alert-banner-icon">⚠️</span>
+        <div class="alert-banner-content">
+          <strong>CoinGecko Rate Limit reached.</strong> Displaying cached/simulated price trends to ensure continuous
+          dashboard availability. Please refresh again in a minute.
+        </div>
+      </div>
+
+      <!-- Loading State -->
+      <div id="prices-loading" class="loading-indicator">
+        <div class="spinner"></div>
+        <p>Fetching real-time price feeds...</p>
+      </div>
+
+      <!-- Error State -->
+      <div id="prices-error" class="loading-indicator" style="display: none;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-danger)" stroke-width="2">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+          <line x1="12" y1="9" x2="12" y2="13" />
+          <line x1="12" y1="17" x2="12.01" y2="17" />
+        </svg>
+        <p style="margin-top: 12px; font-weight: 600;">Unable to connect to price API.</p>
+        <p class="section-desc" style="font-size: 0.9rem;">CoinGecko rate-limits public requests. Please wait a minute
+          and refresh.</p>
+        <button class="btn btn-secondary" id="error-retry-btn" style="margin-top: 12px;">Retry Now</button>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="prices-grid" id="prices-grid" style="display: none;">
+        <!-- Dynamically rendered (Top 5 Cards) -->
+      </div>
+
+      <!-- Additional Coins List -->
+      <div class="prices-list-container glass-panel" id="prices-list-container"
+        style="display: none; margin-top: 40px; padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); background: rgba(20, 15, 38, 0.45);">
+        <h3
+          style="font-family: var(--font-orbitron); font-size: 1.25rem; margin-bottom: 20px; color: var(--color-text-primary); text-shadow: 0 0 10px rgba(0, 242, 254, 0.15); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+          Additional Assets</h3>
+        <div class="prices-list" id="prices-list" style="display: flex; flex-direction: column; gap: 12px;">
+          <!-- Dynamically rendered (Remaining List Rows) -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: SIMULATER (UNIFIED SANDBOX) -->
+    <section id="simulator-page" class="page-view">
+      <div class="section-header">
+        <span class="section-tag">Interactive Sandbox</span>
+        <h2 class="section-title">Visual Blockchain & Layer 2 Simulater</h2>
+        <p class="section-desc">Test block mining, secure rollups via token bridge, solidity smart contracts, and gas
+          economics in one unified sandbox.</p>
+      </div>
+
+      <!-- Sub-Tab Navigation Bar -->
+      <div class="sim-tab-nav glass-panel"
+        style="display: flex; gap: 12px; padding: 12px; margin-bottom: 32px; justify-content: center; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: rgba(20, 15, 38, 0.45); flex-wrap: wrap;">
+        <button class="btn sim-tab-btn" id="sim-tab-btn-hash" onclick="window.location.hash = '#/hash'"
+          style="font-family: var(--font-orbitron); font-size: 0.85rem; padding: 8px 16px;">SHA-256 Hash</button>
+        <button class="btn sim-tab-btn" id="sim-tab-btn-block" onclick="window.location.hash = '#/block'"
+          style="font-family: var(--font-orbitron); font-size: 0.85rem; padding: 8px 16px;">Single Block</button>
+        <button class="btn sim-tab-btn active" id="sim-tab-btn-block-mining"
+          onclick="window.location.hash = '#/simulator'"
+          style="font-family: var(--font-orbitron); font-size: 0.85rem; padding: 8px 16px;">Block Mining</button>
+        <button class="btn sim-tab-btn" id="sim-tab-btn-distributed" onclick="window.location.hash = '#/distributed'"
+          style="font-family: var(--font-orbitron); font-size: 0.85rem; padding: 8px 16px;">Distributed</button>
+        <button class="btn sim-tab-btn" id="sim-tab-btn-tokens" onclick="window.location.hash = '#/tokens'"
+          style="font-family: var(--font-orbitron); font-size: 0.85rem; padding: 8px 16px;">Tokens</button>
+        <button class="btn sim-tab-btn" id="sim-tab-btn-coinbase" onclick="window.location.hash = '#/coinbase'"
+          style="font-family: var(--font-orbitron); font-size: 0.85rem; padding: 8px 16px;">Coinbase</button>
+        <button class="btn sim-tab-btn" id="sim-tab-btn-bridge" onclick="window.location.hash = '#/bridge'"
+          style="font-family: var(--font-orbitron); font-size: 0.85rem; padding: 8px 16px;">L2 Bridge</button>
+        <button class="btn sim-tab-btn" id="sim-tab-btn-contracts" onclick="window.location.hash = '#/contracts'"
+          style="font-family: var(--font-orbitron); font-size: 0.85rem; padding: 8px 16px;">Smart Contracts</button>
+        <button class="btn sim-tab-btn" id="sim-tab-btn-gas" onclick="window.location.hash = '#/gas'"
+          style="font-family: var(--font-orbitron); font-size: 0.85rem; padding: 8px 16px;">Gas Calculator</button>
+      </div>
+
+      <!-- Sub-Tab Content: SHA-256 Hash -->
+      <div class="sim-tab-content" id="simulator-hash" style="display: none;">
+        <!-- How it works explainer first -->
+        <div class="glass-panel sim-explainer-card" style="margin-bottom: 24px;">
+          <h4>How the SHA-256 Hash Simulater Works</h4>
+          <p>
+            SHA-256 (Secure Hash Algorithm 256-bit) is a cryptographic hash function that takes an input of any size and produces a fixed-size 64-character hexadecimal signature (hash).
+          </p>
+          <ul style="margin-left: 20px; margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>One-Way Function:</strong> You can easily calculate the hash from the data, but it is mathematically impossible to retrieve the data from the hash.</li>
+            <li><strong>Deterministic:</strong> The same input will always produce the exact same hash signature.</li>
+            <li><strong>Avalanche Effect:</strong> Even a tiny change (like changing a period or capitalization) completely changes the output hash.</li>
+          </ul>
+        </div>
+
+        <div class="glass-panel" style="padding: 28px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); background: rgba(20, 15, 38, 0.45); max-width: 800px; margin: 0 auto;">
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div>
+              <label style="display: block; font-family: var(--font-orbitron); font-size: 0.9rem; margin-bottom: 8px; color: var(--color-text-primary); font-weight: 700; text-transform: uppercase;">Data Input</label>
+              <textarea id="hash-input-data" rows="5" style="width: 100%; padding: 14px; background: rgba(0, 0, 0, 0.3); border: 1px solid var(--border-color); border-radius: var(--radius-md); color: var(--color-text-primary); font-family: var(--font-mono); font-size: 0.95rem; resize: vertical; outline: none; transition: var(--transition-smooth);" placeholder="Type any text here to watch the hash update in real-time..."></textarea>
+            </div>
+            <div>
+              <label style="display: block; font-family: var(--font-orbitron); font-size: 0.9rem; margin-bottom: 8px; color: var(--color-primary); font-weight: 700; text-transform: uppercase;">SHA-256 Hash Output</label>
+              <div id="hash-output-field" style="width: 100%; padding: 14px; background: rgba(0, 242, 254, 0.05); border: 1px solid var(--color-primary); border-radius: var(--radius-md); color: var(--color-primary); font-family: var(--font-mono); font-size: 1rem; word-break: break-all; font-weight: 700; box-shadow: 0 0 10px rgba(0, 242, 254, 0.1);">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-Tab Content: Single Block -->
+      <div class="sim-tab-content" id="simulator-block" style="display: none;">
+        <!-- How it works explainer first -->
+        <div class="glass-panel sim-explainer-card" style="margin-bottom: 24px;">
+          <h4>How the Single Block Simulater Works</h4>
+          <p>
+            A block packages data together with a <strong>Nonce</strong> (number used once) to solve a Proof of Work cryptographic challenge.
+          </p>
+          <ul style="margin-left: 20px; margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Difficulty Rule:</strong> A hash is only considered "valid" if it starts with a target number of zeros (defined by the difficulty slider).</li>
+            <li><strong>Mining:</strong> Clicking <strong>Mine</strong> runs a loop in your browser, incrementing the nonce until it finds a combination that produces a hash starting with the required zeros.</li>
+            <li><strong>Visual State:</strong> The card turns <span style="color: var(--color-success); font-weight: 700;">green</span> when valid, and <span style="color: var(--color-danger); font-weight: 700;">red</span> when invalid. Editing data invalidates the block instantly!</li>
+          </ul>
+        </div>
+
+        <div style="display: flex; justify-content: center; width: 100%;">
+          <div class="glass-panel sim-block invalid" id="single-block-card" style="max-width: 500px; width: 100%;">
+            <div class="block-meta">
+              <span class="block-num" id="single-block-title-num">BLOCK #1</span>
+              <span class="block-status-badge status-invalid" id="single-block-badge">● INVALID</span>
+            </div>
+
+            <div class="sim-form-group">
+              <label class="sim-label" for="single-block-num">Block Number</label>
+              <input type="number" class="sim-input" id="single-block-num" value="1">
+            </div>
+
+            <div class="sim-form-group">
+              <label class="sim-label" for="single-block-nonce">Nonce</label>
+              <input type="number" class="sim-input sim-input-mono" id="single-block-nonce" value="72608">
+            </div>
+
+            <div class="sim-form-group">
+              <label class="sim-label" for="single-block-data">Block Data (text)</label>
+              <textarea class="sim-input sim-input-mono" id="single-block-data" rows="4" placeholder="Enter block transactions or data..."></textarea>
+            </div>
+
+            <div class="sim-form-group">
+              <span class="sim-label">Block Hash</span>
+              <div class="hash-display-box">
+                <span class="hash-label-inside">HASH</span>
+                <span class="hash-value" id="single-block-hash">0000000000000000...</span>
+              </div>
+            </div>
+
+            <div class="sim-actions" style="margin-top: 12px;">
+              <button class="btn btn-primary" id="single-block-mine-btn" style="width: 100%;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px; vertical-align: middle; display: inline-block;">
+                  <path d="M21.73 18l-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3z"/>
+                </svg> Mine Block
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-Tab Content: Distributed Blockchain -->
+      <div class="sim-tab-content" id="simulator-distributed" style="display: none;">
+        <!-- Explainer -->
+        <div class="glass-panel sim-explainer-card" style="margin-bottom: 24px;">
+          <h4>How the Distributed Blockchain Works</h4>
+          <p>
+            A blockchain is distributed across multiple peers (nodes) in a peer-to-peer network. Each peer keeps a complete copy of the ledger.
+          </p>
+          <ul style="margin-left: 20px; margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Peer Replication:</strong> Peer A, Peer B, and Peer C all have identical copies of the blockchain (Block #1, #2, #3).</li>
+            <li><strong>Consensus Check:</strong> Compare the final block's hash of Peer A, Peer B, and Peer C. If they match, the network is in consensus.</li>
+            <li><strong>Tampering Isolation:</strong> Edit data on Peer B. Notice its chain breaks (turns red) and its hash changes. Since Peer A and Peer C still match, the network rejects Peer B's tampered version!</li>
+          </ul>
+        </div>
+
+        <!-- Dynamic Consensus Status Banner -->
+        <div class="glass-panel" id="dist-consensus-banner" style="margin-bottom: 24px; padding: 18px 24px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; gap: 14px; font-family: var(--font-orbitron); font-weight: 700; border: 1px solid var(--border-color); background: rgba(16, 185, 129, 0.05); transition: var(--transition-smooth);">
+          <span id="dist-consensus-icon" style="font-size: 1.3rem; filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.4));">🟢</span>
+          <span id="dist-consensus-text" style="font-size: 0.95rem; color: var(--color-success); letter-spacing: 0.5px;">Consensus Status: Verified (All nodes have identical, valid chains)</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 32px;">
+          <!-- Peer A -->
+          <div class="peer-section glass-panel" style="padding: 20px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); background: rgba(20, 15, 38, 0.4);">
+            <h3 style="font-family: var(--font-orbitron); font-size: 1.1rem; color: var(--color-primary); margin-bottom: 16px; text-transform: uppercase;">Node Peer A</h3>
+            <div class="blockchain-container" id="peer-a-blocks">
+              <!-- Rendered dynamically by JavaScript -->
+            </div>
+          </div>
+
+          <!-- Peer B -->
+          <div class="peer-section glass-panel" style="padding: 20px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); background: rgba(20, 15, 38, 0.4);">
+            <h3 style="font-family: var(--font-orbitron); font-size: 1.1rem; color: var(--color-primary); margin-bottom: 16px; text-transform: uppercase;">Node Peer B</h3>
+            <div class="blockchain-container" id="peer-b-blocks">
+              <!-- Rendered dynamically by JavaScript -->
+            </div>
+          </div>
+
+          <!-- Peer C -->
+          <div class="peer-section glass-panel" style="padding: 20px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); background: rgba(20, 15, 38, 0.4);">
+            <h3 style="font-family: var(--font-orbitron); font-size: 1.1rem; color: var(--color-primary); margin-bottom: 16px; text-transform: uppercase;">Node Peer C</h3>
+            <div class="blockchain-container" id="peer-c-blocks">
+              <!-- Rendered dynamically by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-Tab Content: Tokens Blockchain -->
+      <div class="sim-tab-content" id="simulator-tokens" style="display: none;">
+        <!-- Explainer -->
+        <div class="glass-panel sim-explainer-card" style="margin-bottom: 24px;">
+          <h4>How the Tokens Blockchain Works</h4>
+          <p>
+            Blockchains don't just store random text; they record transactional history. In this view, block data is structured as ledger transactions containing value transfers.
+          </p>
+          <ul style="margin-left: 20px; margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Ledger Transactions:</strong> Edit transaction values (e.g. amount, sender, or receiver). Any change alters the block hash and breaks the chain.</li>
+            <li><strong>Immutability:</strong> The cryptographic linking prevents modifying historic financial records without re-mining the entire blockchain from the tampered block forward.</li>
+          </ul>
+        </div>
+
+        <div class="blockchain-container" id="tokens-blocks-container">
+          <!-- Dynamically rendered tokens blockchain -->
+        </div>
+      </div>
+
+      <!-- Sub-Tab Content: Coinbase Blockchain -->
+      <div class="sim-tab-content" id="simulator-coinbase" style="display: none;">
+        <!-- Explainer -->
+        <div class="glass-panel sim-explainer-card" style="margin-bottom: 24px;">
+          <h4>How the Coinbase & Balance Tracking Works</h4>
+          <p>
+            A **Coinbase Transaction** is a unique, fee-minting transaction that creates new cryptocurrency tokens out of thin air. It is placed as the first transaction in every block.
+          </p>
+          <ul style="margin-left: 20px; margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Minting Coins:</strong> The Coinbase input fields show how tokens are created and paid to the miner (e.g., $100.00 to Anders).</li>
+            <li><strong>State/Balance Engine:</strong> The simulator dynamically parses all transactions from Block #1 to Block #3 and computes the real-time balances for Anders, Darcy, Elizabeth, Bingley, and Jane.</li>
+            <li><strong>Double-Spend Prevention:</strong> Try changing a transaction value. If a user transfers more funds than their calculated balance at that point in history, the ledger breaks consensus!</li>
+          </ul>
+        </div>
+
+        <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+          <!-- Left side: Balance Sheet -->
+          <div class="glass-panel" style="flex: 1; min-width: 280px; padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); background: rgba(20, 15, 38, 0.45); align-self: flex-start;">
+            <h3 style="font-family: var(--font-orbitron); font-size: 1.15rem; color: var(--color-primary); margin-bottom: 20px; text-transform: uppercase; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+              📊 Ledger Balances
+            </h3>
+            <div id="coinbase-balances-list" style="display: flex; flex-direction: column; gap: 12px;">
+              <!-- Live balances list -->
+            </div>
+          </div>
+
+          <!-- Right side: Coinbase Blockchain Blocks -->
+          <div class="blockchain-container" id="coinbase-blocks-container" style="flex: 3; min-width: 600px;">
+            <!-- Dynamically rendered coinbase blocks -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-Tab Content: Block Mining -->
+      <div class="sim-tab-content" id="simulator-block-mining">
+        <!-- Simulation Explainer first -->
+        <div class="glass-panel sim-explainer-card" style="margin-bottom: 24px;">
+          <h4>How the Blockchain Simulator Works</h4>
+          <p>
+            This interactive simulator represents a live, cryptographic ledger demonstrating Proof of Work (PoW) consensus rules:
+          </p>
+          <ul style="margin-left: 20px; margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Mining Blocks:</strong> Click <strong>Mine</strong> on any block card. The system iterates nonces to compute a SHA-256 hash matching the difficulty pattern. Valid blocks flash a teal glow.</li>
+            <li><strong>Data Tampering:</strong> Type any text in the <strong>Block Data</strong> input box. The current block's hash immediately invalidates and triggers a cascading chain failure.</li>
+            <li><strong>Consensus Recovery:</strong> To restore the chain's integrity, you must click <strong>Mine</strong> on the tampered block to resolve a new nonce, and then sequentially re-mine every block after it. This demonstrates why modifying historic records in a live blockchain is computationally infeasible.</li>
+          </ul>
+        </div>
+
+        <div class="simulator-layout">
+          <!-- Global Simulator Controls -->
+          <div class="sim-controls-panel">
+            <div class="difficulty-selector">
+              <span class="difficulty-label">Mining Difficulty: <strong id="difficulty-val"
+                  style="color: var(--color-primary);">2 Zeros (Easy)</strong></span>
+              <div class="slider-wrapper"
+                style="width: 100%; max-width: 200px; margin-top: 8px; display: flex; align-items: center;">
+                <input type="range" id="difficulty-slider" min="1" max="5" value="2" class="difficulty-slider-input"
+                  style="width: 100%; accent-color: var(--color-primary); cursor: pointer; height: 6px; border-radius: 3px;">
+              </div>
+            </div>
+            <div class="sim-global-actions">
+              <button class="btn btn-secondary" id="add-block-btn" style="padding: 10px 16px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  style="margin-right: 6px; vertical-align: middle;">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+                Add Block
+              </button>
+              <button class="btn btn-secondary" id="reset-simulator-btn" style="padding: 10px 16px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  style="margin-right: 6px; vertical-align: middle;">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+                </svg>
+                Reset Chain
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Blockchain Container -->
+          <div class="blockchain-container" id="blockchain-container">
+            <!-- Rendered dynamically by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-Tab Content: L2 Bridge -->
+      <div class="sim-tab-content" id="bridge-page" style="display: none;">
+        <div class="bridge-layout">
+          <!-- Transfer Panel -->
+          <div class="glass-panel bridge-card">
+            <div class="bridge-tabs">
+              <button class="bridge-tab active" id="bridge-deposit-tab">Deposit (L1 ➔ L2)</button>
+              <button class="bridge-tab" id="bridge-withdraw-tab">Withdraw (L2 ➔ L1)</button>
+            </div>
+
+            <div class="bridge-form">
+              <!-- Source Network -->
+              <div class="bridge-network-box">
+                <span class="network-label">From Source Network</span>
+                <div class="network-display">
+                  <span class="network-icon eth-icon" id="bridge-network-src-icon">Ξ</span>
+                  <span class="network-name" id="bridge-network-src-name">Ethereum Mainnet (L1)</span>
+                </div>
+                <div class="balance-row">
+                  <span>Available Balance:</span>
+                  <span id="bridge-balance-src">10.00 ETH</span>
+                </div>
+              </div>
+
+              <!-- Direction Indicator Arrow -->
+              <div class="bridge-arrow-indicator">
+                <div class="bridge-arrow-icon" id="bridge-direction-arrow">↓</div>
+              </div>
+
+              <!-- Destination Network -->
+              <div class="bridge-network-box">
+                <span class="network-label">To Destination Network</span>
+                <div class="network-display">
+                  <span class="network-icon arb-icon" id="bridge-network-dst-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                  </span>
+                  <span class="network-name" id="bridge-network-dst-name">Arbitrum L2</span>
+                </div>
+                <div class="balance-row">
+                  <span>Available Balance:</span>
+                  <span id="bridge-balance-dst">0.50 ETH</span>
+                </div>
+              </div>
+
+              <!-- Asset & Amount Selection -->
+              <div class="amount-container">
+                <label class="sim-label">Asset to Bridge</label>
+                <div class="asset-selector-group">
+                  <select id="bridge-asset-select" class="bridge-select">
+                    <option value="ETH" selected>ETH (Ethereum)</option>
+                    <option value="USDC">USDC (USD Coin)</option>
+                  </select>
+                  <div class="input-wrapper">
+                    <input type="number" id="bridge-amount" placeholder="0.0" min="0.01" step="0.01" class="sim-input">
+                    <button class="btn-max" id="bridge-btn-max">MAX</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cost breakdown -->
+              <div class="bridge-summary-box">
+                <div class="summary-line">
+                  <span>Bridge Fee:</span>
+                  <span>$0.00 (Gas free for bridge contract)</span>
+                </div>
+                <div class="summary-line">
+                  <span id="bridge-gas-label">L1 Gas Estimation:</span>
+                  <span id="bridge-gas-value">$12.50</span>
+                </div>
+                <div class="summary-line font-glow">
+                  <span>Est. Destination Time:</span>
+                  <span id="bridge-time-value">~15 seconds</span>
+                </div>
+              </div>
+
+              <button class="btn btn-primary w-100" id="initiate-bridge-btn" style="margin-top: 16px;">Bridge
+                Assets</button>
+            </div>
+          </div>
+
+          <!-- Bridge Animation Status Console -->
+          <div class="glass-panel bridge-status-card" id="bridge-status-card" style="display: none;">
+            <div class="bridge-status-header">
+              <h4>Bridge Transaction Console</h4>
+              <span class="terminal-badge">Live Rollup Log</span>
+            </div>
+
+            <div class="bridge-visual-pipeline">
+              <!-- L1 Block Representation -->
+              <div class="pipeline-node" id="node-l1">
+                <div class="node-icon">L1</div>
+                <div class="node-title">Locking on L1</div>
+              </div>
+
+              <!-- Conveyor Belt -->
+              <div class="pipeline-conveyor">
+                <div class="conveyor-pulse" id="rollup-pulse"></div>
+              </div>
+
+              <!-- L2 Block Representation -->
+              <div class="pipeline-node" id="node-l2">
+                <div class="node-icon">L2</div>
+                <div class="node-title">Minting on L2</div>
+              </div>
+            </div>
+
+            <!-- Transaction Logs -->
+            <div class="bridge-terminal-logs" id="bridge-terminal-logs">
+              <!-- Appended dynamically -->
+            </div>
+
+            <!-- Done action -->
+            <div class="bridge-success-action" id="bridge-success-action" style="display: none;">
+              <button class="btn btn-secondary" id="close-bridge-console-btn">Dismiss Console</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-Tab Content: Smart Contracts -->
+      <div class="sim-tab-content" id="contracts-page" style="display: none;">
+        <div class="contracts-layout">
+          <!-- Solidity Code Viewer Panel -->
+          <div class="glass-panel contract-code-panel">
+            <div class="panel-header">
+              <span class="file-name">NexusToken.sol</span>
+              <span class="lang-badge">Solidity 0.8.20</span>
+            </div>
+            <pre class="code-view-container"><code class="solidity-code">
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract NexusToken {
+    string public name = "Nexus Token";
+    string public symbol = "NXT";
+    uint256 public totalSupply;
+    address public owner;
+
+    mapping(address => uint256) private balances;
+
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Mint(address indexed to, uint256 value);
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    function balanceOf(address account) public view returns (uint256) {
+        return balances[account];
+    }
+
+    function mint(address to, uint256 amount) public {
+        require(msg.sender == owner, "Only owner can mint");
+        totalSupply += amount;
+        balances[to] += amount;
+        emit Mint(to, amount);
+        emit Transfer(address(0), to, amount);
+    }
+
+    function transfer(address to, uint256 amount) public returns (bool) {
+        require(balances[msg.sender] >= amount, "Insufficient balance");
+        balances[msg.sender] -= amount;
+        balances[to] += amount;
+        emit Transfer(msg.sender, to, amount);
+        return true;
+    }
+}
+            </code></pre>
+            <div class="code-action-row">
+              <button class="btn btn-primary" id="deploy-contract-btn">Deploy Contract to L2</button>
+              <div id="contract-deploy-status"
+                style="margin-left: 16px; font-size: 0.9rem; color: var(--color-text-secondary);">
+                Status: <span style="color: var(--color-danger); font-weight: 700;">Not Deployed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contract Interface Console (Read/Write) -->
+          <div class="glass-panel contract-console-panel">
+            <div class="panel-header">
+              <h4>Contract Interactor</h4>
+              <span class="terminal-badge" id="contract-address-badge">Unassigned</span>
+            </div>
+
+            <div id="contract-interactions-placeholder" class="interaction-placeholder">
+              <p>Deploy the contract to unlock the interactive Read and Write functions.</p>
+            </div>
+
+            <div id="contract-interactions-active" style="display: none;">
+              <div class="interaction-tabs">
+                <button class="interaction-tab active" id="tab-write-btn">Write Functions (Transactions)</button>
+                <button class="interaction-tab" id="tab-read-btn">Read Functions (Calls)</button>
+              </div>
+
+              <!-- Write Functions Panel -->
+              <div class="interaction-panel" id="panel-write">
+                <!-- Mint Function -->
+                <div class="function-card">
+                  <div class="function-header">
+                    <span class="fn-name">mint</span>
+                    <span class="fn-type write">write</span>
+                  </div>
+                  <div class="function-inputs">
+                    <input type="text" placeholder="to (address)" id="write-mint-to" class="sim-input sim-input-mono">
+                    <input type="number" placeholder="amount (NXT)" id="write-mint-amount" class="sim-input">
+                  </div>
+                  <button class="btn btn-primary btn-sm" id="call-mint-btn">Execute Transaction</button>
+                </div>
+
+                <!-- Transfer Function -->
+                <div class="function-card" style="margin-top: 16px;">
+                  <div class="function-header">
+                    <span class="fn-name">transfer</span>
+                    <span class="fn-type write">write</span>
+                  </div>
+                  <div class="function-inputs">
+                    <input type="text" placeholder="to (address)" id="write-transfer-to"
+                      class="sim-input sim-input-mono">
+                    <input type="number" placeholder="amount (NXT)" id="write-transfer-amount" class="sim-input">
+                  </div>
+                  <button class="btn btn-primary btn-sm" id="call-transfer-btn">Execute Transaction</button>
+                </div>
+              </div>
+
+              <!-- Read Functions Panel -->
+              <div class="interaction-panel" id="panel-read" style="display: none;">
+                <!-- balanceOf Function -->
+                <div class="function-card">
+                  <div class="function-header">
+                    <span class="fn-name">balanceOf</span>
+                    <span class="fn-type read">read</span>
+                  </div>
+                  <div class="function-inputs">
+                    <input type="text" placeholder="account (address)" id="read-balance-addr"
+                      class="sim-input sim-input-mono">
+                  </div>
+                  <div class="read-result-row">
+                    <button class="btn btn-secondary btn-sm" id="call-balance-btn">Query State</button>
+                    <span class="read-result-val" id="balance-query-result">Result: --</span>
+                  </div>
+                </div>
+
+                <!-- name Function -->
+                <div class="function-card" style="margin-top: 16px;">
+                  <div class="function-header">
+                    <span class="fn-name">name</span>
+                    <span class="fn-type read">read</span>
+                  </div>
+                  <div class="read-result-row">
+                    <button class="btn btn-secondary btn-sm" id="call-name-btn">Query State</button>
+                    <span class="read-result-val" id="name-query-result">Result: --</span>
+                  </div>
+                </div>
+
+                <!-- symbol Function -->
+                <div class="function-card" style="margin-top: 16px;">
+                  <div class="function-header">
+                    <span class="fn-name">symbol</span>
+                    <span class="fn-type read">read</span>
+                  </div>
+                  <div class="read-result-row">
+                    <button class="btn btn-secondary btn-sm" id="call-symbol-btn">Query State</button>
+                    <span class="read-result-val" id="symbol-query-result">Result: --</span>
+                  </div>
+                </div>
+
+                <!-- totalSupply Function -->
+                <div class="function-card" style="margin-top: 16px;">
+                  <div class="function-header">
+                    <span class="fn-name">totalSupply</span>
+                    <span class="fn-type read">read</span>
+                  </div>
+                  <div class="read-result-row">
+                    <button class="btn btn-secondary btn-sm" id="call-supply-btn">Query State</button>
+                    <span class="read-result-val" id="supply-query-result">Result: --</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-Tab Content: Gas Calculator -->
+      <div class="sim-tab-content" id="gas-page" style="display: none;">
+        <div class="gas-layout">
+          <!-- Interactive Inputs Panel -->
+          <div class="glass-panel gas-controls-panel">
+            <h4>Congestion & Price Modifiers</h4>
+            <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 24px;">Adjust these sliders
+              to simulate real-time blockchain fee market fluctuations.</p>
+
+            <!-- Input 1: L1 Base Fee -->
+            <div class="gas-slider-group">
+              <div class="slider-labels">
+                <span>Ethereum L1 Base Fee:</span>
+                <span class="slider-badge" id="gas-val-l1-gwei">45 Gwei</span>
+              </div>
+              <input type="range" id="gas-slider-l1" min="10" max="250" value="45" class="gas-slider-input">
+              <span class="slider-help">High Gwei (e.g. >100) represents periods of extreme Ethereum network
+                congestion.</span>
+            </div>
+
+            <!-- Input 2: ETH Price -->
+            <div class="gas-slider-group" style="margin-top: 24px;">
+              <div class="slider-labels">
+                <span>ETH Asset Price:</span>
+                <span class="slider-badge" id="gas-val-eth-price">$3,000 USD</span>
+              </div>
+              <input type="range" id="gas-slider-eth" min="1000" max="6000" step="100" value="3000"
+                class="gas-slider-input">
+              <span class="slider-help">As the value of ETH fluctuates, all computed fees scale proportionally in
+                USD.</span>
+            </div>
+
+            <!-- L2 Constants info -->
+            <div class="gas-info-box" style="margin-top: 24px;">
+              <h5>Arbitrum L2 Fee Optimization Model:</h5>
+              <p style="font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.4; margin-top: 6px;">
+                Arbitrum lowers fees by:
+                1. Compressing and rolling up transaction data (lowering L1 calldata footprints).
+                2. Computing smart contracts on a high-throughput execution layer.
+                L2 gas price is kept stable around <strong>0.1 Gwei</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Comparative Chart Panel -->
+          <div class="glass-panel gas-chart-panel">
+            <div class="panel-header">
+              <h4>Fee Comparison Chart (USD)</h4>
+              <span class="savings-tag" id="gas-savings-total-pct">98.5% Average Savings</span>
+            </div>
+
+            <div class="gas-bar-charts">
+              <!-- Tx 1: Native Transfer -->
+              <div class="chart-section">
+                <div class="chart-section-title">ETH Native Transfer (21,000 Gas)</div>
+                <div class="bars-container">
+                  <div class="bar-row">
+                    <span class="bar-label">Ethereum L1:</span>
+                    <div class="bar-track">
+                      <div class="bar-fill l1-fill" id="bar-transfer-l1" style="width: 80%;"></div>
+                    </div>
+                    <span class="bar-value" id="fee-transfer-l1">$2.83</span>
+                  </div>
+                  <div class="bar-row">
+                    <span class="bar-label">Arbitrum L2:</span>
+                    <div class="bar-track">
+                      <div class="bar-fill l2-fill" id="bar-transfer-l2" style="width: 2%;"></div>
+                    </div>
+                    <span class="bar-value font-glow" id="fee-transfer-l2">$0.04</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tx 2: Token Swap -->
+              <div class="chart-section" style="margin-top: 20px;">
+                <div class="chart-section-title">ERC-20 Token Swap (150,000 Gas)</div>
+                <div class="bars-container">
+                  <div class="bar-row">
+                    <span class="bar-label">Ethereum L1:</span>
+                    <div class="bar-track">
+                      <div class="bar-fill l1-fill" id="bar-swap-l1" style="width: 90%;"></div>
+                    </div>
+                    <span class="bar-value" id="fee-swap-l1">$20.25</span>
+                  </div>
+                  <div class="bar-row">
+                    <span class="bar-label">Arbitrum L2:</span>
+                    <div class="bar-track">
+                      <div class="bar-fill l2-fill" id="bar-swap-l2" style="width: 3%;"></div>
+                    </div>
+                    <span class="bar-value font-glow" id="fee-swap-l2">$0.18</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tx 3: NFT Mint -->
+              <div class="chart-section" style="margin-top: 20px;">
+                <div class="chart-section-title">NFT Mint (250,000 Gas)</div>
+                <div class="bars-container">
+                  <div class="bar-row">
+                    <span class="bar-label">Ethereum L1:</span>
+                    <div class="bar-track">
+                      <div class="bar-fill l1-fill" id="bar-mint-l1" style="width: 100%;"></div>
+                    </div>
+                    <span class="bar-value" id="fee-mint-l1">$33.75</span>
+                  </div>
+                  <div class="bar-row">
+                    <span class="bar-label">Arbitrum L2:</span>
+                    <div class="bar-track">
+                      <div class="bar-fill l2-fill" id="bar-mint-l2" style="width: 4%;"></div>
+                    </div>
+                    <span class="bar-value font-glow" id="fee-mint-l2">$0.25</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Total Calculation breakdown -->
+            <div class="savings-summary-box" style="margin-top: 24px;">
+              <div class="total-saved-row">
+                <span class="savings-label">Your Estimated Savings on 10 Swaps:</span>
+                <span class="savings-num" id="total-savings-usd">$200.70 Saved!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <!-- Col 1: About Us -->
+      <div class="footer-col about-col">
+        <h4 class="footer-title">About Us</h4>
+        <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.5; margin-bottom: 16px;">
+          An interactive educational dashboard designed to explain Web3 fundamentals, live token economics, and
+          blockchain mechanics through visual simulation.
+        </p>
+        <div
+          style="font-size: 0.85rem; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 6px;">
+          <span>Developer: <strong>Daksh Savaliya</strong></span>
+          <span>Batch: <strong>BE 3 SFI</strong></span>
+          <span>College: <strong>The Faculty of Technology and Engineering at The Maharaja Sayajirao
+              University</strong></span>
+          <span>GitHub: <a href="https://github.com/dakshsavaliya" target="_blank" rel="noopener noreferrer"
+              style="color: var(--color-primary); text-decoration: underline; display: inline;">github.com/dakshsavaliya</a></span>
+        </div>
+      </div>
+
+      <!-- Col 2: Site Map -->
+      <div class="footer-col sitemap-col">
+        <h4 class="footer-title">Site Map</h4>
+        <ul class="footer-links-list">
+          <li><a href="#/">Home</a></li>
+          <li><a href="#/concepts">Core Concepts</a></li>
+          <li><a href="#/prices">Live Prices</a></li>
+          <li><a href="#/simulator">Blockchain Simulator</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Simulater Workspace -->
+      <div class="footer-col simulator-col">
+        <h4 class="footer-title">Simulater</h4>
+        <ul class="footer-links-list">
+          <li><a href="#/hash">SHA-256 Hash</a></li>
+          <li><a href="#/block">Single Block</a></li>
+          <li><a href="#/simulator">Block Mining</a></li>
+          <li><a href="#/distributed">Distributed</a></li>
+          <li><a href="#/tokens">Tokens</a></li>
+          <li><a href="#/coinbase">Coinbase</a></li>
+          <li><a href="#/bridge">L2 Bridge</a></li>
+          <li><a href="#/contracts">Smart Contracts</a></li>
+          <li><a href="#/gas">Gas Calculator</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright & Metadata Section -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; 2026 NexusWeb3. All rights reserved. Built as an educational assignment.</p>
+        <p>Developer: <strong>Daksh Savaliya</strong> &bull; Batch: <strong>BE 3 SFI</strong> &bull; College:
+          <strong>The Faculty of Technology and Engineering at The Maharaja Sayajirao University</strong>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
